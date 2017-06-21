@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+	<title>三界生活</title>
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/reset.css">
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/common.css">
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/private/huodong.css">
+	<script src="<?php echo $pc_style; ?>js/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="screen">
+	<header>
+		<h1>三界生活</h1>
+		<a class="u_back" href="javascript:history.go(-1);">返回</a>
+	</header>
+	<div class="main no_footer_main">
+		<div class="life_box">
+			<h3 class="life_title">
+				三界生活
+			</h3>
+			<p>
+				三界生活是以区块链技术为底层的综合性购物平台，采用区块链技术，把控商品从货源到运输各个环节，确保平台商品安全可溯源，平台交易信息和会员管理，直接同步到区块链上，信息公开透明，安全性极高。
+			</p>
+			<p>
+				目前平台处于发展期，非常欢迎有商品资源的厂家联系我们成为供应商，也欢迎有实体店铺的商家联系我们合作。
+			</p>
+			<div class="j_box">
+				<ul class="j_top">
+					<li>官方热线</li>
+					<li>招商热线</li>
+				</ul>
+				<ul class="j_cen">
+					<li>全国热线：<span>010-57210185</span></li>
+					<li>华北地区：<span>13718649545</span></li>
+					<li>华南地区：<span>13718564971</span></li>
+					<li>华南地区：<span>13718565971</span></li>
+					<li>西南地区：<span>13718649545</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/zepto.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

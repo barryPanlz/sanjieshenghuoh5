@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+	<title>商家主页</title>
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/reset.css">
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/common.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/live/livecheck.css"/>
+	<script src="<?php echo $pc_style; ?>js/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="screen">
+	<header>
+		<h1>商家主页</h1>
+		<a class="u_back" href="javascript:window.history.go(-1);">返回</a>
+	</header>
+	<div class="main">
+		
+		<div class="sk_top">
+			<div class="sk_top_top">
+				<img src="<?php echo $pic_host.$lists->storeImg; ?>"/>
+				<ul>
+					<li><?php echo empty($lists->storeName)?" ":$lists->storeName; ?></li>
+				</ul>
+			</div>
+			<div class="sk_top_bot">
+				<ul>
+					<li>电话：</li>
+					<li><?php echo empty($lists->storePhone)?" ":$lists->storePhone; ?></li>
+					<li>地址：</li>
+					<li><?php echo empty($lists->address)?" ":$lists->address; ?></li>
+				</ul>
+				<div>
+					<li>
+						<!--<img src="<?php //echo $pic_host.$merchant['Rcode']; ?>"/>
+						<p>扫码享受vip服务</p>-->
+					</li>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<div class="sk_center_wrap">
+			<div class="sk_center_head">
+				商家介绍
+			</div>
+			<div class="sk_center_conternt">
+				<img src="<?php echo $pc_style; ?>images/shop.png"/>
+				<?php echo empty($lists->storeDesc)?" ":$lists->storeDesc; ?>
+			</div>
+		</div>
+		<div class="sk_center_wrap">
+			<div class="sk_center_head">
+				在售商品
+			</div>
+			<div class="sk_center_ul_wrap">
+               <?php if(!empty($salelists)){ foreach($salelists->storeGoodsCanBuyList as $v){ ?>
+				<li>
+					<a href="<?php echo Yii::$app->urlManager->createUrl(['life/goodsdetails','id'=>$v->store_goods_id]);?>">
+						<img src="<?php echo $pic_host.$v->goods_img;?>"/>
+						<div class="li_right">
+							<p class="cont_title">
+								<?php echo $v->goods_name; ?> 
+							</p>
+							 <p class="cont_mony">
+								<!--<span>
+									￥
+								</span>
+								<span><?php //echo $v->shop_price;?></span>-->
+							</p> 
+							<p class="cont_bott">
+								<em>
+									<span id="">
+										￥
+									</span>
+									<span>
+										<i><?php echo $v->shop_price;?></i>
+									</span>
+								</em>
+								<b>
+									<span>
+										已售
+									</span>
+									<b><?php echo $v->goods_sales;?></b>
+								</b>
+							</p>
+						</div>
+					</a>
+				</li>
+				<?php } }?>
+
+			</div>
+			
+			
+			
+			
+		<!--非空列表-->
+		<?php if(empty($salelists->storeGoodsCanBuyList)){ ?>
+		<div class="empty_list">
+			<img class="identity_img" src="<?php echo $pc_style; ?>images/shangpinzhanweitu.png"/>
+			<p> 抱歉，该页面无在售商品 </p>
+		</div>
+		<?php }?>	
+			
+		</div>
+</div>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/fastclick.js"></script>
+<script>
+	/*fastclick解决移动端点击延迟的问题*/
+	if ('addEventListener' in document) {
+	    document.addEventListener('DOMContentLoaded', function() {
+	        FastClick.attach(document.body);
+	    }, false);
+	}
+</script>
+</body>
+</html>

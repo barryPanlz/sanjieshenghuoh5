@@ -1,0 +1,677 @@
+
+.fix:after{
+	display: block;
+	content:'';
+	clear: both;
+	height: 0;
+	visibility: visible;
+}
+.fix{
+	*zoom:1;
+} 
+header{
+	background: #fff; 
+}
+header .u_back{
+	background: url(../../images/rightarrow.png) no-repeat center left;
+	background-size: 0.4rem;
+}
+header h1{
+	color:#282828;
+	font-size:.32rem;
+}
+
+/*顶部的余额板块*/
+.b_box{
+	margin: .15rem 0;
+	padding:.5rem 0 .5rem 0;
+	height:1.2rem;
+	background: #F3001C;
+}
+.b_box ul .border_active:after{
+	content: '';
+	position: absolute;
+	top:.05rem;
+	right:.01rem;
+	height:1.01rem;
+	border:1px solid #C10F10;
+	z-index: 11;
+}
+.b_box ul .border_active_d:after{
+	height:1.6rem;
+}
+.b_box ul li{
+	position:relative;
+	float:left;
+	width:50%;
+	text-align: center;
+}
+.b_box ul li .txt{
+	font-size:.28rem;
+	color:#fff;
+}
+.b_box ul li .num{
+	display: block;
+	font-size:.48rem;
+	color:#fff;
+	margin-top:.2rem;
+}
+.b_box ul li .why{
+	margin: 0 auto;
+	margin-top:.1rem;
+	display: block;
+	line-height: .5rem;
+	width:1.8rem;
+	height:.5rem;
+	font-size:.24rem;
+	border:1px solid #fff;
+	color:#fff;
+	border-radius: 3px;	
+}
+/*顶部月模块结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*充充值转账模块*/
+.z_box{
+	height:.6rem;
+	padding:.14rem 0px;
+	background: #fff;
+}
+
+.z_box ul li{
+	font-size:0;
+	float:left;
+	border-left:1px solid #c9c9c9;
+	width:33%;
+	height:.6rem;
+	line-height: .6rem;
+	text-align: center;
+
+}
+.z_box ul li img{
+	width:.14rem;
+	height:.08rem;
+}
+
+.z_box ul li a{
+	color:#F3001D;
+	font-size:.28rem
+}
+.z_box select{
+	width:100%;
+	height:.6rem;
+	line-height: .6rem;
+	text-align: center;
+	font-size:.28rem;
+	color:#F3001D;
+}
+.z_box option{
+	width:100%;
+	height:.6re
+	font-size:.28rem;
+	color:#F3001D;
+}
+.z_box ul li:first-child{
+	border-left:1px solid #fff;
+}
+/*充值转账模块结束*/
+
+
+/*账单明细列表区*/
+.acc_box{
+	margin-top:.14rem;
+	background: #fff;
+	height:auto;
+}
+.z_d{
+	height:.74rem;
+	line-height: .74rem;
+	border-bottom:1px solid #f6f6f6;
+	padding:0 .3rem;
+}
+.z_d p{
+	font-size:.24rem;
+	color:#282828;
+}
+.z_list .z_tit li{
+	position: relative;
+	top:0;
+	height:.74rem;
+	line-height: .74rem;
+	width:20%;
+	text-align: center;
+	float:left;
+	font-size:.22rem;
+	color:#282828;
+	background: #fff;
+}
+.z_list .z_tit  li img{
+	width:.14rem;
+	height:.08rem;
+	margin-left: .04rem;
+}
+
+
+
+/*列表位置*/
+.z_li ul li{
+	white-space:nowrap;overflow:hidden;text-overflow: ellipsis;
+	width:20%;
+	text-align: center;	
+	height:.74rem;
+	line-height: .74rem;
+	float:left;
+	font-size:.18rem;
+	color:#282828;
+	background: #fff;
+}
+.z_li ul{
+	background: #fff;
+    border-bottom:1px solid #f6f6f6;
+	height:.74rem;
+	padding-left:.3rem;
+	padding-right:.3rem;
+}
+.z_li  ul #cladate{
+	width:18%;
+	margin-right:2%;
+}
+.z_li  ul #acc_name{
+	width:26%;
+	margin-right:2%;
+}
+.z_li  ul #wlbi_amnt{
+	width:18%;
+	margin-right:2%;
+}
+.z_li  ul #wlbao_amnt{
+	width:16%;
+	margin-right:2%;
+}
+.z_li ul #rmb_amnt{
+	width:12%;
+	margin-left:2%;
+}
+.re_box{
+	height:1.4rem;
+}
+.re_box_d{
+	height:1.8rem;
+}
+
+/*合计的钱*/
+.z_heji ul{
+	height:.84rem;
+	background: #F3001D;
+}
+.z_heji ul li{
+	height:.86rem;
+	border: none;
+	font-size:.28rem;
+	line-height:.86rem;
+	color:#fff;
+	font-weight: 100;
+	background: #F3001D;
+}
+.z_li  ul li:first-child{
+	width:18%;
+	margin-right:2%;
+}
+.z_li  ul li:nth-child(2){
+	width:26%;
+	margin-right:1%;
+}
+.z_li  ul li:nth-child(3){
+	width:18%;
+	margin-right:1%;
+}
+.z_li  ul li:nth-child(4){
+	width:16%;
+	margin-right:1%;
+}
+.z_li  ul li:nth-child(5){
+    width:12%;
+	margin-left:1%;
+}
+/*加载出来的样式*/
+
+
+/*列表位置结束*/
+
+
+
+/*====================转账列表区结束===========*/
+/*普通会员我的推荐*/
+
+
+
+
+
+
+
+
+
+
+
+/*交易类型下拉弹窗效果*/
+.m_box{
+	clear: both;
+	position:absolute;
+	width:2.06rem;
+	border-radius:4px;
+	background: #fff;
+	box-shadow:0px 1px 10px #000000;
+	z-index: 22;
+	display: none;
+	cursor: pointer;
+	margin-bottom:.6rem;
+}
+.m_box span{
+	position:absolute;
+	left:.4rem;
+	top:-.28rem;
+	z-index: 11;
+	border-left:10px solid transparent;
+	border-top:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid #fff ;
+}
+.m_box div{
+	width:100%;
+	height:.54rem;
+	font-size:.2rem;
+	color:#282828;
+	line-height: .54rem;
+	border-bottom:1px solid #ccc;
+	text-align: left;
+	text-indent: .14rem;
+	overflow: hidden;
+	white-space: normal;
+	text-overflow:ellipsis;
+}
+.m_box div:last-child{
+	border-bottom:none;
+}
+
+/*普通会员我的推荐页面*/
+.b_box1{
+	margin:.15rem 0;
+}
+.b_box1 ul li{
+	width:33.3%;
+}
+.b_box1 ul li .num {
+	font-size:.2rem;
+}
+.b_box1 ul li .num span {
+	font-size:.36rem;
+	color:#fff;
+}
+.z_list2,.g_li{
+	clear: both;
+}
+.z_list2 .z_tit li,.g_li ul li{
+	width:24%;
+}
+.g_li ul li:first-child{
+	width:23%;
+}
+.g_li ul li:nth-child(2){
+	width:26%;
+	margin-right:.2rem;
+}
+.g_li ul li:nth-child(3){
+	width:26%;
+	margin-right:.2rem;
+}
+.g_li ul li:nth-child(4){
+	width:16%;
+	margin-right:0;
+}
+
+/*-----------普通会员我的推荐页面结束------------*/
+
+
+
+
+
+/*供应商我的账房页面*/
+.sup_type{
+	height:1.7rem;
+}
+.g_box .txt{
+	font-size:.28rem;
+}
+.g_box .num{
+	font-size:.48rem;
+}
+.g_box .num,.g_box .txt{
+	color:#fff;
+}
+.g_box ul li{
+	width:99.9%;
+}
+.g_withdraw{
+	font-size:0;
+	text-align: center;
+	line-height: .6rem;
+}
+.g_withdraw a{
+	font-size:.28rem;
+	color:#F3001D;
+	
+}
+.s_list .z_tit li,.s_li ul li{
+	width:33.33%;
+	text-align: left;
+}
+.s_li ul li:first-child{
+	width:24%;
+	margin-right:16%;
+}
+.s_li ul li:nth-child(2){
+	width:30%;
+	margin-right:16%;
+}
+.s_li ul li:nth-child(3){
+	width:12%;
+	margin-right:0;
+}
+/*-------------------供应商我的账房页面结束-------------------*/
+
+
+
+
+
+
+/*商铺我的账房*/
+.store_box ul li{
+	width:32%;
+}
+.store_box ul li .txt{
+	font-size:.24rem;
+}
+.store_box ul li .num{
+	margin-top:.2rem;
+	font-size:.40rem;
+}
+.store_box span{
+	color:#fff;
+}
+.z_store_box ul li{
+	width:33%;
+}
+.store_a{
+	height:3.9rem;
+}
+
+
+.z_list .z_tit_store li:first-child{
+	width:22%;
+}
+.z_list .z_tit_store li:nth-child(2){
+	width:30%;
+}
+.z_list .z_tit_store li:nth-child(3){
+	width:26%;
+}
+.z_list .z_tit_store li:nth-child(4){
+	width:24%;
+	
+}
+
+.z_store_t ul li:first-child{
+	margin-right:5%;
+}
+.z_store_t ul li:nth-child(2){
+	margin-right:4%;
+}
+.z_store_t ul li:nth-child(3){
+	margin-right:10%;
+}
+.z_store_t ul li:nth-child(4){
+	margin-right:0;
+}
+
+
+
+
+/*商铺账房结束*/
+.store_box_num ul li{
+	width:33.3%;
+}
+/*
+.z_li {
+	 white-space:nowrap;
+	 text-overflow: ellipsis;
+}*/ 
+.m_agent{
+	display: none;
+	height:1.68rem;
+}
+/*商铺账房结束*/
+
+/*商铺我辖区的店铺*/
+.store_box ul li{
+	width:49%;
+}
+
+
+
+
+/*改*/
+.z_list{
+	clear: both;
+	border-bottom: 1px solid #f6f6f6;
+}
+.z_tit{
+  padding-left:.3rem ;
+}
+.z_list .z_tit .t1{
+ text-align: left;
+}
+
+.z_tit span{
+	font-size:.22rem;
+}
+.z_li{
+	width: 100%;
+	background: #fff;
+	border-bottom:1px solid #f6f6f6;
+} 
+.z_list .z_tit li{
+	text-align: left;
+}
+.z_li ul li{
+	text-align: left;
+}
+
+.z_list .z_tit li{
+	width:19%;
+}
+.z_li ul li{
+	width:19%;
+}
+.z_list .z_tit li:nth-child(2){
+	width:28%;
+}
+.z_list .z_tit li:nth-child(5){
+	width:15%;
+}
+
+.z_li ul li{
+	width:19%;
+}
+
+.z_li ul li:nth-child(5){
+	width:15%;
+}
+.z_heji{
+	height:.86rem;
+}
+.g_lione{
+	background: #F3001D;
+}
+
+/*我的推荐*/
+.z_list2{
+	height:.74rem;
+}
+.z_list2 .z_tit{
+	border-bottom: 1px solid #f6f6f6;
+}
+.z_list2 .z_tit li{
+	text-align:left;
+	width:24%;
+}
+.z_list2 .z_tit li:nth-child(2){
+	width:28%;
+}
+.z_list2 .z_tit li:nth-child(3){
+	width:28%;
+}
+.z_list2 .z_tit li:nth-child(4){
+	width:20%;
+}
+.g_li ul li{
+	text-align:left;
+	width:22%;
+}
+
+
+/*代理商*/
+
+
+.s_list ul li:first-child{
+	width:20%;
+}
+.s_list ul li:nth-child(2){
+	width:30%;
+	margin-left:18%;
+}
+.s_list ul li:nth-child(3){
+	width:14%;
+	margin-left:18%;
+}
+
+
+.s_li ul{
+	padding:0 .3rem;
+}
+.s_db{
+	background: #F3001D;
+}
+
+/*供应商*/
+.sup_list{
+	height:.74rem;
+}
+.sup_li{
+	background: #F3001D;
+}
+.z_li ul li{
+	font-weight: 400;
+}
+.aa_li{
+	background: #F3001D;
+}
+
+
+.z_box ul .zz_1{
+	width:30%;
+}
+.z_box ul .zz_2{
+	width:30%;
+}
+.z_box ul .zz_3{
+	width:38%;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*&&&&&&&&&&&&____________增加转账______________&&&&&&&&*/
+.trans_num{
+	position:relative;
+}
+.trans_num span{
+	display: block;
+	width:80%;
+	font-size:.28rem;
+	color:#F3001D;
+	margin-right:10px;
+}
+.trans_num img{
+	position: absolute;
+	top:.3rem;
+	right:.4rem;
+}
+.trans_num div{
+	display: none;
+	width: 100%;
+	position: absolute;
+	left:0;
+	z-index: 11;
+	background: #fff;
+	box-shadow: 1px 2px 4px #8C8C8C;
+	border-radius: 3px;
+}
+.trans_num a{
+	display: block;
+}
+.trans_num a:first-child{
+	border-bottom:1px solid #f6f6f6;
+}
+
+
+/*-----------------增加分页---------------*/
+.page_book{
+	width:60%;
+	margin:.2rem auto;
+	display: block;
+	font-size:0;
+	clear: both;
+}
+.page_book a{
+	height:.4rem;
+	width:1.2rem;
+	font-size:.20rem;
+	color: #db210c;
+	border:1px solid #db210c;
+	border-radius: 3px;
+	background: #fff;
+	text-align: center;
+	line-height: .4rem;
+
+}
+.page_book a:first-child{
+	float:left;
+}
+.page_book a:last-child{
+	float:right;
+}
+/*-----------------分页结束-----------------*/
+

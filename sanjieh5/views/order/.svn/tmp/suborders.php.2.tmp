@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+    <title>提交订单</title>
+    <link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/reset.css">
+    <link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/private/suborder.css"/>
+    <script src="<?php echo $pc_style; ?>js/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="screen">
+    <header>
+        <h1>提交订单</h1>
+<!--        <a class="u_back" href="javascript:history.go(-1);">返回</a>-->
+        <a class="u_back" href="<?php echo Yii::$app->urlManager->createUrl('car/car'); ?>">返回</a>
+    </header>
+    <div class="main">
+        <a href="<?php echo Yii::$app->urlManager->createUrl('user/useraddresslist');?>">
+        <div class="sub_top">
+            <?php if(!empty($user_address)){ ?>
+                <ul class="sub_top_left">
+                    <?php if(count($user_address) == 1){?>
+                        <?php foreach($user_address as $v){
+                            $address_id = $v['address_id'];
+                            ?>
+                            <li>
+
+                        <span class="u u-act fl" attr_id="<?php echo $v['address_id']; ?>">
+                            <?php echo $v['consignee']; ?>
+                        </span>
+                                <em><?php echo $v['mobile']; ?></em>
+                            </li>
+                            <li><?php echo $v['province'].$v['city'].$v['area'].$v['address']; ?></li>
+                        <?php } ?>
+
+
+                    <?php }else{
+                    $num = 0;
+                    foreach($user_address as $v){
+                        if($v['default'] == 1){
+                            $num = 1;
+                        }else{
+                            $num = 0;
+                        }
+                    }
+                    ?>
+                    <?php foreach($user_address as $v){
+                    if($num == 1){ ?>
+                    <span class="u <?php if($v['default']==1){echo "u-act"; $address_id = $v['address_id'];} ?> fl" attr_id="<?php echo $v['address_id']; ?>">
+                        <?php	}else{
+                        $address_id = $v['address_id'];
+                        ?>
+                        <span class="u u-act fl" attr_id="<?php echo $v['address_id']; ?>">
+                        <?php	}?>
+                            <li>
+                        <span class="u <?php if($v['default']==1){echo "u-act"; $address_id = $v['address_id'];} ?> fl" attr_id="<?php echo $v['address_id']; ?>">
+                            <?php echo $v['consignee']; ?>
+                        </span>
+                                <em><?php echo $v['mobile']; ?></em>
+                            </li>
+                            <li><?php echo $v['province'].$v['city'].$v['area'].$v['address']; ?></li>
+                            <?php }} ?>
+                            <input type="hidden" name="ajax_address_id" value="<?php echo !empty($address_id)?$address_id:"";?>" />
+                </ul>
+                <div class="sub_top_right">
+                    <!--                    选择收货地址-->
+<!--                    <a href="--><?php //echo Yii::$app->urlManager->createUrl('user/useraddresslist');?><!--">-->
+                        <a class="save_cookie">
+                            <img src="<?php echo $pc_style; ?>images/back.png"/>
+                        </a>
+                </div>
+            <?php }else{ ?>
+                <ul class="sub_top_left_1">
+                    请添加收货地址
+                </ul>
+                <div class="sub_top_right">
+                    <!--                    添加收货地址-->
+                    <!--                    <a href="--><?php //echo Yii::$app->urlManager->createUrl('user/address');?><!--">-->
+                    <a class="save_cookie">
+                        <img src="<?php echo $pc_style; ?>images/back.png"/>
+                    </a>
+                </div>
+            <?php }?>
+        </div>
+</a>
+
+        <div class="sub_center">
+            <ul>
+                <?php $count_money = 0; foreach($goods as $v){ ?>
+                    <li>
+                        <input type="hidden" name="goods_id[]" value="<?php echo $v['goodsId']; ?>" />
+                        <input type="hidden" name="goods_num[]" value="<?php echo $v['num']; ?>" />
+                        <input type="hidden" name="skuInfo[]" value="<?php echo $v['skuInfo']; ?>" />
+                        <div class="sub_li_left">
+                            <img src="<?php echo $pic_host.$v['goodsImg']; ?>"/>
+                        </div>
+                        <div class="sub_li_right">
+                            <p><?php echo $v['goodsName']; ?></p>
+
+                            <?php if (!empty($_GET['sku_id'])){ ?>
+                                        <p><span><?php echo $_GET['sku_id']?></span></p>
+
+                                    <?  }else{?>
+                                            <p><span><?php  echo $v['skuInfo']?></span></p>
+                                        <?php }?>
+
+                            <!-- <p><span><?php //echo $v['skuInfo'];?></span></p> -->
+                            <p>
+                                <b><i class="shopPrice"><?php echo $v['goodsPrice']; ?></i><i>三界石</i></b>
+                                <!--							<em class="jiajian">-->
+                                <!--								<span class="oper jia_up" title="减一">-</span>-->
+                                <!--							 	<input type="number" name="" class="onub" value="1" />-->
+                                <!--							 	<span class=".oper jian_next" title="加一">+</span>-->
+                                <!--							</em>-->
+
+                                <!--                                购买数量-->
+                                <!-- <em class="jiajian">
+                                <span class="oper jia_up" title="减一">-</span>
+                                <input type="number" name="" class="onub" value="<?php /*echo $v['num']; */?>" />
+                                <span class="oper jian_next" title="加一">+</span>
+                            </em>-->
+                                <?php if($v['isPromote'] ==1){ ?>
+                                    <em class="jiajian" style="font-size: 0.32rem; text-align: center;line-height: 0.45rem; font-style:normal;border:none;">
+                                        <input style="border: none; margin-top:0.1rem ;" type="number" name="" class="onub" value="<?php echo $v['num']; ?>"  readonly="readonly"/>
+                                    </em>
+                                <?php }else{?>
+                                    <em class="jiajian" style="font-size: 0.32rem; text-align: center;line-height: 0.45rem; font-style:normal;border:none;">
+                                        <input style="border: none; margin-top:0.1rem ;" type="number" name="" class="onub" value="<?php echo $v['num']; ?>"  readonly="readonly"/>
+                                    </em>
+<!--                                    <em class="jiajian">-->
+<!--                                        <span class="oper jia_up" title="减一">-</span>-->
+<!--                                        <input type="number" name="" class="onub" value="--><?php //echo $v['num']; ?><!--"  readonly="readonly"/>-->
+<!--                                        <span class=".oper jian_next" title="加一">+</span>-->
+<!--                                    </em>-->
+                                <?php }?>
+
+                            </p>
+                        </div>
+                    </li>
+                <?php } ?>
+                <div class="peisong_wrap">
+                    <div class="peisong">
+                        <div><span>配送方式：</span><span>普通快递</span></div>
+                        <div><span>运费 :</span><span>0.00</span></div>
+                        <div class="heji">
+                            </span><i>合计：</i><i class="shopAllMonye"><?php echo $count_money; ?></i><i>三界石</i>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
+        </div>
+    </div>
+    <footer>
+        <div class="dingdananniu">
+            <div class="dingdan_heji">
+                <span >合计：</span>
+                <i  class="shopAllMonye"><?php echo $count_money; ?></i>
+                <i>三界石</i>
+            </div>
+            <a href="###" class="dingdan_queding">
+                提交订单
+            </a>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/fastclick.js"></script>
+<script>
+    $(".save_cookie").click(function(){
+        var url = self.location.href;
+        document.cookie = "url="+url+";path=/";
+        location.href = "<?php echo Yii::$app->urlManager->createUrl('user/useraddresslist');?>";
+        //alert(url);
+    })
+    // /////提交订单   ////////////
+    $('.dingdan_queding').click(function(){
+        var address_id = $("input[name='ajax_address_id']").val();
+        if(address_id==''||typeof(address_id)=="undefined"){
+            alert("您还没有选择收货地址！");
+            return false;
+        };
+        var shippingName = "普通快递";
+        var isPromote = "<?=$isPromote?>";
+        var goodsId = "";
+        $("input[name='goods_id[]']").each(function(index,item){
+            goodsId += $(this).val()+',';
+        });
+        goodsId = goodsId.substring(0,goodsId.length-1);
+        var goodsNumber = "";
+        $("input[name='goods_num[]']").each(function(index,item){
+            goodsNumber += $(this).val()+',';
+        });
+        var skuInfo = "";
+        $("input[name='skuInfo[]']").each(function(index,item){
+            skuInfo += $(this).val()+',';
+        });
+        goodsNumber = goodsNumber.substring(0,goodsNumber.length-1);
+        var postscript = "附言为空";
+         <?php if(!empty($_GET['sku_id'])){ ?>
+                    var sku = "<?php echo $_GET['sku_id'] ?>";
+                    var skuValue = "1";
+                    <?php }else { ?>
+                    var sku = skuInfo;
+                    var skuValue = "2";
+                    <?php }?>
+        //var skuId = "0";
+        //var skuValue = "0";
+        var userCode = "0";
+        $.ajax({
+            type:'POST',
+            data:'shippingName='+shippingName+'&address_id='+address_id+'&goodsId='+goodsId+'&goodsNumber='+goodsNumber+'&postscript='+postscript+'&skuInfo='+sku+'&skuValue='+skuValue+'&userCode='+userCode+'&isPromote='+isPromote,
+            dataType:'json',
+            url:'<?php echo Yii::$app->urlManager->createUrl('order/order');?>',
+            success:function(data){
+                if(data.errno==0){
+                    console.log('---------------');
+                    console.log(data);
+                    if(data.isPromote == 1){
+                        location.href= "<?php echo Yii::$app->urlManager->createUrl('order/pay_order');?>?order_sn="+data.data.orderNum+"&money="+data.data.orderAmount;
+                    }else{
+                        location.href= "<?php echo Yii::$app->urlManager->createUrl('order/pay_order');?>?order_sn="+data.data.orderNum+"&money="+data.data.orderAmount;
+                    }
+                }else if(data.errno=="-15"){
+<<<<<<< .mine
+                    alert("请选择商品属性！");
+                }else if(data.errno=="-94"){
+                    alert("订单生成失败，用户类型只能为普通会员和创业会员，商品无法购买！");
+                }else if(data.errno=="-95"){
+                    alert("订单生成失败，参数为空无法确定购买价格！");
+=======
+                    console.log(data.error);
+                    alert("网络异常,请稍后重试！");
+                }else if(data.errno=="-94"){
+                    alert("订单生成失败，用户类型只能为普通会员和创业会员，商品无法购买！");
+                }else if(data.errno=="-95"){
+                    alert("订单生成失败，参数为空无法确定购买价格！");
+>>>>>>> .r672
+                }else{
+                    console.log(data);
+                    //alert("您还没有选择收货地址！");
+                    alert(data.error);
+                }
+            }
+        });
+    })
+    $(document).ready(function() {
+        /*fastclick解决移动端点击延迟的问题*/
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
+        //加减
+        var oNub=1;
+        var allNub=0;
+        $(".jia_up").click(function(){
+            $(this).parent(".jiajian").find(".oper").css("color","#282828");
+            oNub=$(this).parent(".jiajian").find(".onub").val();
+            var shopAllMoney=$(".shopAllMonye").eq(0).text();
+            oNub--;
+            if(oNub<1){
+                oNub=1;
+                $(this).parent(".jiajian").find(".jia_up").css("color","#999999");
+                var shopAllmonye=parseFloat(0);
+                var hejiNub=$(".shopAllMonye").eq(0).text();
+                var allNub=parseFloat(hejiNub)+parseInt(shopAllmonye);
+                var allNub=parseFloat(hejiNub)+parseInt(shopAllmonye);
+                $(".shopAllMonye").text(allNub);
+            }else{
+                var shopmony=$(this).parents("li").find(".shopPrice").text();
+                var shopAllmonye=parseFloat(-shopmony);
+                var hejiNub=$(".shopAllMonye").eq(0).text();
+                var allNub=parseFloat(hejiNub)+parseInt(shopAllmonye);
+            }
+
+            $(this).parent(".jiajian").find(".onub").val(oNub);
+            $(".shopAllMonye").text(allNub);
+            return false;
+        });
+        $(".jian_next").click(function(){
+            $(this).parent(".jiajian").find(".oper").css("color","#282828");
+            oNub=$(this).parent(".jiajian").find(".onub").val();
+            oNub++;
+            $(this).parent(".jiajian").find(".onub").val(oNub);
+            var shopmony=$(this).parents("li").find(".shopPrice").text();
+            var shopAllmonye=parseFloat(shopmony);
+            var hejiNub=$(".shopAllMonye").eq(0).text();
+            var allNub=parseFloat(hejiNub)+parseInt(shopAllmonye);
+            $(this).parent(".jiajian").find(".onub").val(oNub);
+            $(".shopAllMonye").text(allNub);
+            return false;
+        });
+        $(document).ready(function(){
+            var subCenter=$(".sub_center").find("li");
+            var shopNub=0;
+            var shopAllMoney=0;
+            $.each(subCenter, function(m) {
+                shopNub++;
+                console.log($(this).find(".shopPrice").text()) ;
+                var shopMoney=parseFloat($(this).find(".shopPrice").text()*$(this).find(".onub").val());
+//            console.log(shopMoney);
+                shopAllMoney+=shopMoney;
+            });
+            $("#shopNub").text(shopNub);
+            $(".shopAllMonye").text(shopAllMoney);
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/***********************绑定手机***************************/
+.phone_phone{
+	font-size: 0.24rem;
+	color: #848484;
+	margin: 0.3rem 0 0.3rem 0.3rem;
+}
+.phone_input{
+	font-size: 0;
+	width: 5.8rem;
+	height: 0.94rem;
+	background: #FFFFFF;
+	border-radius: 3px;
+	margin-left: 0.3rem;
+}
+.phone_input span{
+	float: left;
+	width: 0.94rem; 
+	height: 0.94rem; 
+	border-right: 1px solid #D4D4D4;
+}
+.phone_input span img{
+	display: block;
+	width: 0.4rem;
+	height: 0.4rem;
+	margin: 0.27rem auto 0;
+}
+.phone_input input{
+	float: left;
+	width: 4.6rem; 
+	padding-left: 0.14rem;
+	height: 0.94rem; 
+	font-size: 0.24rem;
+	color: #999999;
+}
+.phone_button{
+	clear: both;
+	margin-top: 0.7rem;
+}
+
+
+
+
+
+
+
+/***********************判断手机验证码***************************/
+.code_input{
+	float: left;
+	font-size: 0;
+	width: 3.5rem;
+	height: 0.94rem;
+	background: #FFFFFF;
+	border-radius: 3px;
+	margin-left: 0.3rem;
+}
+.code_input span{
+	float: left;
+	width: 0.94rem; 
+	height: 0.94rem; 
+	border-right: 1px solid #D4D4D4;
+}
+.code_input span img{
+	display: block;
+	width: 0.4rem;
+	height: 0.4rem;
+	margin: 0.27rem auto 0;
+}
+.code_input input{
+	float: left;
+	width: 2.4rem;  
+	padding-left: 0.14rem;
+	height: 0.94rem; 
+	font-size: 0.24rem;
+	color: #999999;
+}
+
+.code_auth{
+	float: left;
+	margin-left: 0.08rem;
+	width: 2.22rem;
+	text-align: center;
+	height: 0.94rem;
+	line-height: 0.94rem;
+	border-radius: 3px;
+	background: #f01c1b;
+	font-size: 0.24rem;
+	color: #FFFFFF;
+}
+.code_auth_1{
+	display: none;
+	float: left;
+	margin-left: 0.08rem;
+	width: 2.22rem;
+	text-align: center;
+	height: 0.94rem;
+	line-height: 0.94rem;
+	border-radius: 3px;
+	background: #fe4e4e;
+	font-size: 0.24rem;
+	color: #FFFFFF;
+}
+.code_auth_1 span{
+	color: #FFFFFF;
+	font-size: 0.28rem;
+}
+.code_button{
+	clear: both;
+	margin-top: 1.7rem;
+}
+
+
+
+
+
+
+
+
+

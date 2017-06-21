@@ -1,0 +1,172 @@
+.u_search_special{
+	left: 0.16rem;
+}
+.add_merchant{
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 1.55rem;
+	height: 0.74rem;
+	line-height: 0.74rem;
+	font-size: 0.26rem;
+	color: #FFFFFF;
+}
+.add_merchant img{
+	 margin-right: 0.02rem;
+	width: 0.22rem;
+	height: 0.22rem;
+}
+/*大分类导航*/
+.big_classificate{ 
+    position: relative; 
+    z-index: 5;
+	min-height: 0.4rem;
+	padding-bottom: 0.15rem; 
+	width: 100%; 
+	background: #FFFFFF; 
+	overflow-x: auto; 
+} 
+.big_classificate li{
+	margin-top: 0.15rem;
+	float: left;
+	font-size: 0.24rem;
+	color: #000000;
+	width: 1.34rem;
+	text-align: center;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	background: #f1f2f6;
+	border-radius: 3px;
+	margin-left: 0.2rem;
+} 
+.big_classificate .big_classificate_li{
+	background: #f3001d;
+	color: #FFFFFF;
+}
+
+/*子商品列表*/
+.subclass{
+	width: 100%;
+	height: auto;
+}
+.sk_center_ul_wrap{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin:0.2rem 0;
+}
+.sk_center_ul_wrap li{
+	width: 6.0rem;
+	min-height: 2rem;
+	padding: 0.2rem;
+	border-bottom:1px solid #f6f6f6 ;
+	background: #FFFFFF;
+	overflow: hidden;
+}
+.sk_center_ul_wrap li img{
+	width: 2rem;
+	height: 2rem;
+	float: left;
+}
+.sk_center_ul_wrap .li_right{
+	width: 3.8rem;
+	min-height: 2rem;
+	float: left;
+	margin-left:0.2rem ;
+}
+.cont_title{
+	width: 100%;
+	height:0.9rem;
+	line-height: 0.46rem;
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #282828;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2; 
+}
+.cont_content{
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.3rem;
+	font-size: 0.16rem;
+	color: #848484;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2; 
+}
+.cont_mony{
+	width: 100%;
+	height: 0.4rem;
+	padding: 0.1rem 0;
+}
+.cont_mony span{
+	color: #F3001D;
+	float: left;
+}
+.cont_mony span:nth-of-type(1){
+	font-size: 0.2rem;
+	margin-top:0.05rem ;
+	
+}
+.cont_mony span:nth-of-type(2){
+	font-size: 0.3rem;
+}
+.cont_bott{
+	width: 100%;
+	height: 0.3rem;
+	
+}
+.cont_bott em{
+	font-style: normal;
+	float: left;
+	font-size: 0.2rem;
+	color: #999999;
+}
+.cont_bott span{
+	font-size: 0.2rem;
+	color: #999999;
+}
+.cont_bott del{
+	font-size: 0.2rem;
+	color: #999999;
+}
+.cont_bott i{
+	font-style: normal;
+	font-size: 0.2rem;
+	color: #999999;
+}
+.cont_bott b{
+	font-size: 0.2rem;
+	float: right;
+	font-weight: 400;
+}
+.cont_bott b span{
+	color: #999999;
+}
+
+
+.empty_list{
+	width: 100%;
+}
+.empty_list img{
+	display: block;
+	width: 1.7rem;
+	height: 1.48rem;
+	margin: 0 auto;
+	margin-top: 1.16rem;
+}
+.empty_list p{
+	width: 100%;
+	text-align: center;
+	font-size: 0.2rem;
+	color: #999999;
+	margin-top: 0.16rem;
+}
+
+

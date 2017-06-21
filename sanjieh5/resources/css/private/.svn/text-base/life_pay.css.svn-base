@@ -1,0 +1,115 @@
+/***************************未来生活-付款成功******************************/
+header{
+	background-color: #12aca0;
+}
+/*未来生活-图像区*/
+.lift_suc_img{
+	width: 5.8rem;
+	text-align: center;
+	padding: 0 0.3rem;
+	height: 3.5rem;
+	background-color: #FFFFFF;
+	margin-top: 0.14rem;
+}
+.lift_suc_img>img{
+	width: 1.44rem;
+	height: 1.02rem;
+	display: block;
+	margin: 0 auto;
+	padding-top: 0.6rem;
+}
+.lift_suc_img h3{
+	font-weight: 400;
+	font-size: 0.24rem;
+	color: #575757;
+	margin-top: 0.5rem;
+}
+.lift_suc_img p{ 
+	font-size: 0.18rem;
+	color: #848484;
+	margin-top: 0.2rem;
+	padding-bottom: 0.52rem;
+	border-bottom: 1px solid #DDDDDD;
+}
+/*未来生活-成功信息*/
+.lift_suc_detalis{
+	width: 5.8rem;
+	text-align: center;
+	padding: 0 0.3rem;
+	height: 3.1rem;
+	background-color: #FFFFFF; 
+}
+.lift_suc_detalis ul{
+	width: 100%;
+	padding-top: 0.2rem;
+	height: 0.58rem;
+}
+.lift_suc_detalis .lift_suc_detalis_ul{
+	padding-top: 0.4rem;
+}
+.lift_suc_detalis ul li{
+	width: 50%;
+	text-align: left;
+	float: left;
+	font-size: .18rem;
+	color: #848484;
+	height: 0.2rem;
+	line-height: 0.2rem;
+}
+.lift_suc_detalis ul li span{
+	display: block;
+	color: #848484;
+}
+.lift_suc_detalis ul li font{
+	display: block;
+	padding-top: 0.16rem;
+	font-size: 0.2rem;
+	color: #848484;
+}
+.lift_suc_detalis .lift_suc_detalis_font{
+	color: #575757;
+}
+.lift_suc_detalis ul li strong{
+	display: block;
+	padding-top: 0.16rem;
+	font-size: 0.2rem;
+	font-weight: 400;
+	color: #12aca0;
+}
+.lift_suc_detalis ul li font img{
+	width: 0.24rem;
+	height: 0.24rem;
+	float: left;
+}
+.lift_suc_detalis ul li font i{
+	float: left;
+	font-style: normal;
+	margin-left: 0.08rem;
+}
+.lift_suc_detalis ul li strong i{ 
+	font-style: normal; 
+}
+.pay_suc_btn{
+	background: #12aca0;
+    position: absolute;
+	bottom: 0.2rem;
+	width: 5.8rem;
+}
+
+
+
+/***************************未来生活-付款失败******************************/
+.lift_suc_img1>img{
+	width: 1.02rem;
+	height: 1.02rem; 
+}
+.lift_suc_img .lift_suc_img1_h3{
+	margin-top: 0.2rem;
+	padding-bottom: 0.4rem;
+	border-bottom: 1px solid #DDDDDD;
+}
+.lift_fail_detalis{
+	height: 1.2rem;
+}
+
+

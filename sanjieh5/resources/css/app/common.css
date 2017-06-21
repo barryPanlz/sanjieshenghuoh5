@@ -1,0 +1,370 @@
+/*em设置*/
+html{
+    font-size: 100%;
+}
+/* 整体稳定结构--------------------- */
+html,body,.screen{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+header{ 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.74rem;
+	background-color: #f3001e;
+	z-index: 99;
+	font-size: 0.32rem;
+}
+header.u_live_header{
+	background-color: #12aca0;
+}
+.main{
+	position: absolute;
+	width: 100%; 
+	left: 50%;
+	top: 0;
+	bottom: 0.86rem;
+	background-color: #f6f6f6;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	z-index: 9;
+	transform: translate(-50%,0);
+	-webkit-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
+	-o-transform: translate(-50%,0);	
+	transform: translate(-50%,0);
+}
+footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.86rem;
+	background-color: #fff;
+	border-top: #e5e5e5;
+	box-sizing:border-box;
+	z-index: 99;
+}
+
+/* header部分 */
+header{
+	padding: 0 0.3rem;
+	box-sizing:border-box;
+	position: relative;
+}
+header h1{
+	width: 60%;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	margin: 0 auto;
+	color: #fff;
+	height: 100%;
+	line-height: 0.74rem;
+	text-align: center;
+	font-weight: 400;
+}
+header .u_classfy,header .u_search,header .u_edit,header .u_done,header .u_back{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 0.3rem;
+	width: 0.68rem;
+}
+header .u_classfy,header .u_back{
+	left: 0.3rem;
+	width: 0.8rem;
+	text-indent: -9999px;
+	background: url(../../images/icon6.png) no-repeat left center;
+	-webkit-background-size: 25px;
+	background-size: 25px;
+}	
+header .u_back{
+	background-image: url(../../images/icon_back.png);
+	width: 0.48rem;
+	-webkit-background-size: 0.34rem;
+	background-size: 0.38rem;
+	font-size: 0.32rem;
+}
+header .u_search{
+	right: 0.3rem;
+	width: 0.48rem;
+	background: url(../../images/icon8.png) no-repeat right center;
+	-webkit-background-size: 0.48rem;
+	background-size: 0.4rem;
+	text-indent: -9999px;
+}
+header .u_edit,header .u_done{
+	line-height: 0.74rem;
+	color: #fff;
+	text-align: center;
+}
+header .u_search_box{
+	position: absolute;
+	right: 0.3rem;
+	height: 0.6rem;
+	margin-top: 0.07rem;
+	width: 80%;
+	border-radius: 0.2rem;
+}
+header .u_search_box input{
+	background: #b00015;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.1rem;
+	color: #fff;
+	padding-left: 0.2rem;
+	box-sizing:border-box;
+	font-size: 0.24rem;
+	opacity: 0.7;
+}
+header.u_live_header .u_search_box input{
+	background: rgba(255,255,255,0.5);
+}
+header .u_search_box input::-webkit-input-placeholder{
+	color: #fff;
+}
+header .u_search_box .u_search{
+	width: 0.4rem;
+	-webkit-background-size: 0.4rem;
+	background-size: 0.4rem;
+	right:0.2rem;
+}
+header .u_search_box input[type="submit"]{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 0.3rem;
+	width: 0.48rem;
+	background: url(../../images/icon8.png) no-repeat right center;
+	-webkit-background-size: 0.48rem;
+	background-size: 0.48rem;
+	text-indent: -9999px;
+}
+header .u_search_box input[type="button"]{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	right: 0.3rem;
+	width: 0.48rem;
+	background: url(../../images/icon8.png) no-repeat right center;
+	-webkit-background-size: 0.48rem;
+	background-size: 0.48rem;
+	text-indent: -9999px;
+}
+/* footer部分 */
+footer{
+	border-top: 1px solid #e5e5e5;
+}
+footer ul{
+	overflow: hidden;
+	height: 100%;
+}
+footer ul li{
+	float: left;
+	width: 33.3%;
+	text-align:center;
+	height: 100%;
+}
+footer ul li a{
+	width: 100%;
+	height: 100%;
+	display:block;
+}
+footer ul li div{
+	overflow: hidden;
+}
+footer ul li div img{
+	display: block;
+	margin: 0.1rem auto 0;
+	width:0.4rem;
+	vertical-align: inherit;
+}
+footer ul li p{
+	height: 0.31rem;
+	font-size: 0.24rem;
+}
+footer ul li .active_t{
+	color: #f3001e;
+}
+/* main部分 */
+.no_footer_main{
+	bottom:0;
+}
+.white_main{
+	background: #fff;
+}
+/* 单选框和复选框元件 */
+input[type=checkbox],input[type=radio]{
+-webkit-appearance: none;
+appearance: none;
+width: 0.28rem;
+height: 0.3rem;
+vertical-align: bottom;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+background: url(../../images/icon_checkbox.png);
+-webkit-background-size: 100%;
+background-size: 100%;
+position: relative;
+top:-0.02rem;
+margin-right: 0.1rem;
+border-radius: 50%;
+}
+
+input[type=checkbox]:active,
+input[type=radio]:active {
+border-color: #f3001e;
+}
+
+input[type=checkbox]:hover,
+input[type=radio]:hover{
+border-color: #f3001e;
+-webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+-moz-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+}
+
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+background: #fff;
+border-radius: 50%;
+}
+
+input[type=checkbox]:checked::after,
+input[type=radio]:checked::after {
+content: '';
+display: block;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 0.28rem;
+width: 0.28rem;
+background: url(../../images/icon_checkbox_red.png);
+-webkit-background-size: 100%;
+background-size: 100%;
+}
+
+input[type=checkbox]:focus,
+input[type=radio]:focus {
+outline: none;
+border-color:#f3001e;
+}
+
+input[type=radio]{
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url(../../images/icon_radio.png);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	top: 0.02rem;
+}
+
+input[type=radio]:checked::after {
+height: 0.4rem;
+width: 0.4rem;
+background: url(../../images/icon_radio_red.png);
+-webkit-background-size: 100%;
+background-size: 100%;
+}
+
+/* 按钮元件 */
+.u_link_button,.u_button{
+	 font-size: 0.32rem;
+	margin: 0 0.3rem;
+	background: #f01c1b;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	box-sizing:border-box;
+	border-radius: 0.1rem;
+}
+.u_link_button a{
+	
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+}
+.u_button input{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background:#f01c1b;
+	color: #fff;
+	border-radius: 0.1rem;
+}
+
+/* 可能复用的控件 */
+.u_list{
+	background: #fff;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	margin-top: 0.14rem;
+}
+.u_list ul li{
+	overflow: hidden;
+	height: 0.8rem;
+}
+.u_list ul li div,.u_list ul li h4,.u_list ul li span{
+	float: left;
+	margin-right: 0.2rem;
+	line-height: 0.8rem;
+	font-size: 0.24rem;
+}
+.u_list ul li img{	
+	width: 0.3rem;
+	position: relative;
+}
+.u_list ul li h4{
+	color: #282828;
+	font-weight: 500;
+}
+.u_list ul li span{
+	color: #575757;
+}
+.u_list ul li span.u_degree{
+	background: #f3001e;
+	color: #fff;
+	border-radius: 2px;
+	line-height: 0.32rem;
+	height: 0.32rem;
+	margin:0.24rem 0;
+	padding:0 0.2rem;
+	font-size: 0.2rem;
+}
+/*模态框*/
+.motai_succe{
+	width: 3.7rem;
+	height: 1.7rem;
+	background: rgba(1,1,1,0.5) url(../../images/icon23.png) center 0.25rem no-repeat;
+	background-size: 0.66rem 0.66rem;
+	font-size: 0.24rem;
+	line-height: 2.4rem;
+	text-align: center;
+	color: #FFFFFF;
+	border-radius:2px ;
+}
+.motai_lose{
+	width: 3.7rem;
+	height: 1.7rem;
+	background: rgba(1,1,1,0.5) url(../../images/icon24.png) center 0.25rem no-repeat;
+	background-size: 0.66rem 0.66rem;
+	font-size: 0.24rem;
+	line-height: 2.4rem;
+	text-align: center;
+	color: #FFFFFF;
+	border-radius:2px ;
+}
+
+
+
+
+
+
+

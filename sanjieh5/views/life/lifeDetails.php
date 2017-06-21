@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<title><?php echo empty($goods_info['goods_name'])?'':$goods_info['goods_name']; ?>--三界生活商城-积分商城|区块链商城</title>	
+		<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/common/reset.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/common/common.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/private/shopDetails.css" />
+		<script src="<?php echo $pc_style; ?>js/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<?php echo $pc_style; ?>js/lib/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<?php echo $pc_style; ?>js/lib/jquery.touchSlider.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<?php echo $pc_style; ?>js/lib/jquery.event.drag-1.5.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<header class="life_header">
+			<a class="u_back" href="javascript:history.go(-1);">返回</a>
+			<h1>商品详情</h1>
+			<!-- <a class="u_info u_search" href="<?php //echo Yii::$app->urlManager->createUrl('merchant/index');?>"></a> -->
+		</header>
+		<div class="main main_art">
+			<div class="main_visual">
+				<!-- <div class="flicking_con">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<span>/2</span>
+				</div> -->
+				<div class="main_image">
+					<ul>
+						<li><img src="<?php echo $pic_host.$goods_info['goods_img']; ?>" alt="" /></li>
+						<li><img src="<?php echo $pic_host.$goods_info['goods_img']; ?>" alt="" /></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="d_info">
+				<div class="d_top_box l_top_box">
+					<div class="d_top l_top">
+						<p><?php echo empty($goods_info['goods_name'])?'':$goods_info['goods_name']; ?></p>
+					</div>
+					<div class="d_mid ">
+						<div class="d_mid_top l_btm_top">
+							<p>商品编码：<span><?php echo empty($goods_info['goods_sn'])?'':$goods_info['goods_sn']; ?></span></p>
+							<p><!-- 有效期截止到<span>&nbsp;<?php //echo $goods_info['effective_time']; ?></span>（周末、法定节假日通用） --></p>
+							<p class="l_money_box"><span><?php if($goods_info['is_hot']==1){echo $goods_info['promote_price'].'&nbsp;三界石';}else{echo '￥'.$goods_info['shop_price'].'&nbsp;元';} ?></span>
+<!--								<del>￥--><?php //echo $goods_info['shop_price']; ?><!--</del>-->
+							</p>
+						</div>				
+					</div>
+					<div class="l_lifd">
+						<p class="fl">已销售  <span><?php echo $goods_info['goods_sales']; ?></span></p>
+						<!--<p class="fr">杭州</p>-->
+					</div>					
+				</div>								
+			</div>
+			<div class="l_address_box">
+				<div class="address_top_box">
+					<img src="<?php echo $pc_style; ?>images/shop.png" alt="" />
+					<span><?php echo $merchant['store_name']; ?></span>
+				</div>
+				<div class="addres_mid_box">
+					<p>QQ：<?php echo $merchant['QQ']; ?></p>
+					<p>电话：<?php echo $merchant['store_tel']; ?></p>
+					<p>手机：<?php echo $merchant['store_phone']; ?></p>
+					<p class="add"><span class="d1">地址：</span><span class="d2"><?php if(!empty($province['province'])&&!empty($city['city'])&&!empty($area['area'])){echo $province['province'].$city['city'].$area['area'].$merchant['address'];} ?></span></p>
+					<!-- <a href="<?php //echo \Yii::$app->urlManager->createUrl(['life/merchantinde','merchant_id' =>$merchant['store_id']]); ?>">进入店铺</a> -->
+					<a href="<?php echo \Yii::$app->urlManager->createUrl(['merchant/goodslist','storeId' =>$merchant['store_id']]); ?>">进入店铺</a>
+				</div>
+			</div>
+			<div class="d_tit">
+				<h3>商品详情</h3>
+				<p> <?php echo $goods_info['goods_desc']; ?></p>
+			</div>
+		</div>
+		<footer>
+			<ul class="l_footer">
+				<li >
+					<a href="<?php echo \Yii::$app->urlManager->createUrl(['index/index']); ?>">
+						<div><img src="<?php echo $pc_style; ?>images/shouye-ct.png" alt=""></div>
+						<p>三界商城</p>
+					</a>				
+				</li >
+				 		
+			</ul>
+			<ul class="l_footer_btn">
+			<input type="hidden" id="is_hot" value="<?php echo $goods_info['is_hot'];?>">
+				<a style="cursor:pointer;" id="liji" attr_goodsid="<?php echo empty($goods_info['store_goods_id'])?'0':$goods_info['store_goods_id']; ?>">立即购买</a>
+			</ul>
+		</footer>
+
+		<div class="mark">
+			<div class="opc">
+			</div>
+		</div>
+		<div class="c_box">
+			<div class="color_box">
+				<h3>颜色</h3>
+				<ul class="color_kind">
+					<li>蓝色</li>
+					<li class="c_3">红色</li>
+					<li>黄色</li>
+				</ul>
+			</div>
+			<div class="rule_box">
+				<h3>规格</h3>
+				<ul class="rule_kind">
+					<li>S</li>
+					<li class="c_3">M</li>
+					<li>L</li>
+					<li>XL</li>
+				</ul>
+			</div>
+			<div class="num_box">
+				<p class="fl">数量</p>
+				<p class="fr">
+					<span class="d_subtract">-</span>
+					<input type="text" class="d_numVal" value="1" />
+					<span class="d_add">+</span>
+				</p>
+			</div>
+			<div class='c_chu'>
+				<p>库存<span>1180</span>件</p>
+			</div>
+			<div class="sure">
+				确定
+			</div>
+		</div>
+
+		<!--购物成后-->
+		<div class="succ">
+			<div class="succ_box">
+				<img src="<?php echo $pc_style; ?>images/chenggong.png" alt="" />
+				<p>加入购物车成功</p>
+			</div>
+		</div>
+
+		<script>
+	
+		</script>
+	</body>
+
+</html>
+<script type="text/javascript">
+var url = self.location.href;
+document.cookie = "url="+url+";path=/";
+
+
+	$(document).ready(function() {
+	   
+	    $("#liji").click(function(){
+                var goods_id = $(this).attr('attr_goodsid');
+                var is_hot = $("#is_hot").val();
+                
+			    location.href="<?php echo Yii::$app->urlManager->createUrl('life/futherorder'); ?>?goods_id="+goods_id+"&is_hot="+is_hot;
+		});
+            
+		$(".main_image").touchSlider({
+			flexible: true,
+			speed: 300,
+			btn_prev: $("#btn_prev"),
+			btn_next: $("#btn_next"),
+			paging: $(".flicking_con a"),
+			counter: function(e) {
+				$(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+			}
+		});
+		
+        //遮罩选择区
+    	$('.add_cart,.buy_now').click(function() {
+			$('.mark,.c_box').show();
+		})
+		$('.sure').click(function() {
+			$('.mark,.c_box').hide();
+			$('.succ').show();
+		})
+        
+        //选项卡
+		$('.color_kind li').click(function(){
+			$(this).addClass('c_3').siblings().removeClass('c_3')
+		})
+		$('.rule_kind li').click(function(){
+			$(this).addClass('c_3').siblings().removeClass('c_3')
+		})
+		
+		//数字加减
+		var numVal = '';
+		$('.d_subtract').bind("click",function(){	
+			numVal=$('.d_numVal').val();
+			if(numVal>0){
+				numVal--;
+				$('.d_numVal').val(numVal);	
+			}		
+			$(this).addClass('c28').siblings('span').removeClass('c28');
+		
+			 
+		})
+		$('.d_add').click(function(){
+			numVal=$('.d_numVal').val();
+			numVal ++;
+			$('.d_numVal').val(numVal);	
+		    $(this).addClass('c28').siblings('span').removeClass('c28');
+		})
+	});
+</script>

@@ -1,0 +1,140 @@
+
+.stage{
+	position:relative;
+	height:.85rem;
+	display: none;
+}
+.slider{
+	position:absolute;
+	height:.85rem;
+	box-shadow:0 0 3px #999;
+	background-color:#e5e5e5;
+	left:0;right:0;
+}
+.label_b{
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #999), color-stop(.4, #999), color-stop(.5,red), color-stop(.6,#999), color-stop(1, #999));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slidetounlock 3s infinite;
+    -webkit-text-size-adjust: none;
+    line-height:.88rem;
+    height:.85rem;
+    text-align: center;
+    font-size: .20rem;
+    width: 100%;
+    color:#999;
+}
+@keyframes slidetounlock
+{
+    0%     {background-position:-2rem 0;}
+    /*50%     {background-position:0rem 0;}*/
+    100%   {background-position:2rem 0;}
+}
+@-webkit-keyframes slidetounlock
+{
+    0%     {background-position:-2rem 0;}
+    /*50%     {background-position:0rem 0;}*/
+    100%   {background-position:2rem 0;}
+}
+.button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .85rem;
+    height: .85rem;
+    background-color: #fff;
+    transition: left 0s;
+    -webkit-transition: left 0s;
+}
+.button-on{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .85rem;
+    height: .78rem;
+    background-color: #fff;
+    transition: left 1s;
+    -webkit-transition: left .5s;
+}
+.track{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 0s;
+    -webkit-transition: width 0s;
+}
+.track-on{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s;
+    -webkit-transition: width .5s;
+}
+.icon  {
+	font-size:0;
+    width: .84rem;
+    height:.76rem;
+   text-align: center;
+    font-family: sans-serif;
+    border:1px solid #ddd;
+    
+}
+.icon:before{
+    content:'>>';
+    color:#ccc;
+    line-height:.85rem;
+    font-size:.24rem; 
+}
+.spinner {
+    width:.42rem;
+    height:.42rem;	
+	background: url('../../images/ok.png') no-repeat;
+    display: none;
+ 	position:relative;
+ 	background-size:100%;
+ 	left:.2rem;
+ 	top:.2rem;
+
+    
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.8) }
+    40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(.8);
+        -webkit-transform: scale(.8);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+.bg-green {
+    line-height:.85rem;
+    height: .78rem;
+    width: 100%;
+    text-align: center;
+    font-size: .2rem;
+    background-color: #00ba61;
+    color:#fff;
+}
+.spinner_b{
+	position:relative;
+	width:.82rem;
+	height:.78rem;
+	border:1px solid #ddd;
+}
+.spinner_b:before{
+	/*position:absolute;
+	height:100%;
+	right:-1px;
+	background: #ddd;*/
+}

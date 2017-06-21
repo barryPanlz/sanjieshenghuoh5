@@ -1,0 +1,50 @@
+.security_list{	
+	box-sizing:border-box;
+}
+.security_list li{
+	margin-top: .14rem;
+	min-height: 1.58rem;
+	overflow: hidden;
+	padding: 0 .3rem;
+	padding-bottom: .3rem;
+	background: #fff;
+}
+.list_top{
+	overflow: hidden;
+	margin-top: .25rem;
+}
+.list_top h3{
+	float: left;
+	font-size: .26rem;
+	color: #282828;
+	position: relative;
+}
+.list_top h3 img{
+	width: .34rem;
+	margin-left: .1rem;
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+.list_top p{
+	float: right;
+	font-size: .24rem;
+	color: #282828;
+	position: relative;
+	padding-left: .4rem;
+}
+.list_top p.red a{
+	color: #f01c1c;
+}
+.list_top p img{
+	width: .28rem;
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+	left: 0;
+}
+.list_bottom{
+	color: #848484;
+	font-size: .20rem;
+	margin-top:.2rem;
+}

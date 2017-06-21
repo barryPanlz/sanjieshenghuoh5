@@ -1,0 +1,321 @@
+<?php
+    use yii\helpers\Url;
+?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+	<title>三界生活首页</title>
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/reset.css">
+	<link rel="stylesheet" href="<?php echo $pc_style; ?>css/common/common.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/private/mallIndex.css"/>
+	<script src="<?php echo $pc_style; ?>js/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php echo $pc_style; ?>js/lib/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php echo $pc_style; ?>js/lib/jquery.touchSlider.js" type="text/javascript" charset="utf-8"></script>
+	<script src="<?php echo $pc_style; ?>js/lib/jquery.event.drag-1.5.min.js" type="text/javascript" charset="utf-8"></script>
+ 
+</head> 
+<body>
+<div class="screen">
+	  <!--三界生活首页头部-->
+	<header class="u_live_header">
+		<a class="u_classfy" href="<?php echo Yii::$app->urlManager->createUrl(['life/all_cat']);?>">列表</a>
+		<h1>三界生活</h1>
+		<a class="u_search" href="<?php echo Yii::$app->urlManager->createUrl(['life/all_cat']);?>">搜索</a>
+	</header>
+	<div class="main main_1">		 
+	  <!--三界生活首页轮播图-->
+	  <div class="mallIndex_img"> 
+		<div class="main_visual">
+			<!--<div class="flicking_con">
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<span>/9</span>
+			</div>-->
+			<div class="main_image">
+				<ul id="main_image_ul">
+					
+					<li><a href="<?php echo \Yii::$app->urlManager->createUrl(['navi/freshman','page'=>0]);?>"><img src="<?php echo $pc_style; ?>images/11.jpg" alt="" /></a></li>
+					<li><a href="<?php echo \Yii::$app->urlManager->createUrl(['life/merchantinde','merchant_id' =>'7']); ?>"><img src="<?php echo $pc_style; ?>images/22.png" alt="" /></a></li> 
+				<!--	<li><img src="<?php echo $pc_style; ?>images/banner_02.jpg" alt="" /></li> -->
+				</ul>
+				<a href="javascript:;" id="btn_prev"></a>
+				<a href="javascript:;" id="btn_next"></a>
+			</div>
+        </div>
+			
+	  </div>
+	  
+	  <!--三界生活首页-总导航-->
+	  <div class="mallIndex_navi">
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl(['life/all_cat']);?>">
+	  		<img src="<?php echo $pc_style; ?>images/menu4.png"/>
+	  		<p> 更多商品 </p>
+	  	</a>
+		<a href="<?php echo Yii::$app->urlManager->createUrl('index/online');?>">
+	  		<img src="<?php echo $pc_style; ?>images/gonggao.png"/>
+	  		<p> 上线公告 </p>
+	  	</a>
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl('novice/index1');?>">
+	  		<img src="<?php echo $pc_style; ?>images/xinshou.png"/>
+	  		<p> 新手指导 </p>
+	  	</a>
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl('user/dianpuorder');?>">
+	  		<img src="<?php echo $pc_style; ?>images/menu5.png"/>
+	  		<p> 订单查询 </p>
+	  	</a>
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl('index/index');?>">
+	  		<img src="<?php echo $pc_style; ?>images/bendi_ico.png"/>
+	  		<p> 三界商城 </p>
+	  	</a>
+	  	
+	  </div>  
+	  
+	  
+	   <!--合伙商-->
+	  <!--<div class="partnerShip partnerShip_total">
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl('index/business');?>">
+	  		<img src="<?php echo $pc_style; ?>images/cyms.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl('index/realstore');?>" class="mallIndex_list_a">
+	  		<img src="<?php echo $pc_style; ?>images/lyjd.jpg"/> 
+	  	</a>
+	    <a href="<?php echo Yii::$app->urlManager->createUrl('index/attract');?>">
+	  		<img src="<?php echo $pc_style; ?>images/shfw.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo Yii::$app->urlManager->createUrl('index/agent');?>" class="mallIndex_list_a">
+	  		<img src="<?php echo $pc_style; ?>images/xxyl.jpg"/> 
+	  	</a>
+	  </div>-->
+	  
+	  
+	     <!--爆款抢购-->
+  <div class="mallIndex_h3"> 爆款抢购 </div>
+	  <div class="cl_center">
+			<ul>
+				<li>
+					<a href="<?php echo Yii::$app->urlManager->createUrl('life/promotionlst');?>">
+						<img src="<?php echo $pc_style; ?>images/banner_02.jpg" alt="" />
+					</a>
+				</li>
+				
+				<li>
+					<a href="<?php echo Yii::$app->urlManager->createUrl('life/xingtai');?>">
+						<img src="<?php echo $pc_style; ?>images/fuzhou.jpg" alt="" />
+					</a>
+				</li>
+				
+				<li>
+					<a href="<?php echo Yii::$app->urlManager->createUrl('life/shangqiu');?>">
+						<img src="<?php echo $pc_style; ?>images/shangqiu.jpg" alt="" />
+					</a>
+				</li>
+	   
+			</ul>
+        </div> 
+	  
+	  
+	  
+	  
+	  
+	   <!--三界生活首页-热销团购-->
+	  <div class="mallIndex_h3"> 热销团购 </div>
+	  
+	  <!--<ul class="mallIndex_life life_index"> 
+	  	    <li> 
+				<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodsdetails?id=42'])?>"><img src="<?php echo $pc_style; ?>images/life_index/zhe.jpg"/></a>
+    	  		<p> 酷男孩儿的选择 </p>
+    	  		<font> 摩托车和自行车的完美结合！ </font>
+    	  		<em class="life_index_em">￥400 </em> 
+    	  		<ol> <span> 门店价 <del>￥460</del> </span> <strong> 已售<i> 30 </i> </strong>  </ol> 
+	  	    </li> 
+	  	    <li class="mallIndex_life_li1" > 
+    	  		<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodsdetails','id' =>'39'])?>"><img src="<?php echo $pc_style; ?>images/hongfanqie.png"/></a>
+    	  		<p> 儿童小摩托车 </p>
+    	  		<font> 适合3-7岁宝宝，邢台市区免费 </font>
+    	  		<em class="life_index_em">￥380 </em> 
+    	  		<ol> <span> 门店价 <del> ￥400 </del> </span> <strong> 已售<i> 3015 </i> </strong>  </ol> 
+	  	    </li> 
+	  </ul> -->
+	  <!--商城首页-商品列表-->
+	  <ul class="mallIndex_list">
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'18']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_01.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'3']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_02.jpg"/> 
+	  	</a>
+	    <a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'4']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_03.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'123']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_04.jpg"/> 
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'20']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_05.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'123']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_06.jpg"/> 
+	  	</a>
+	    <a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'41']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_07.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'42']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_08.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'127']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_09.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'128']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_10.jpg"/> 
+	  	</a>
+	    <a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'129']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_11.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'135']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_12.jpg"/> 
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'137']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_13.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'56']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_14.jpg"/> 
+	  	</a>
+	    <a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'138']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_15.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'57']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_16.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'61']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_17.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'64']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_18.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'65']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_19.jpg"/> 
+	  	</a>
+	  	<a href="<?php echo \Yii::$app->urlManager->createUrl(['life/goodslist',"catId"=>'63']);?>"> 
+	  		<img src="<?php echo $pc_style; ?>images/live_product_20.jpg"/> 
+	   </a>
+	  </ul>
+	  
+ 
+ 
+		
+	</div>
+	
+	<footer>
+		<ul>
+			<li>
+				<a href="<?php echo Yii::$app->urlManager->createUrl('index/index');?>">
+					<div><img src="<?php echo $pc_style; ?>images/shouye-ct.png" alt=""></div>
+					<p>三界商城</p>
+				</a>				
+			</li>
+			<li class="nowpage">
+				<a href="<?php echo Yii::$app->urlManager->createUrl('life/life_index');?>">
+					<div><img src="<?php echo $pc_style; ?>images/weilaishenghuo-xz.png" alt=""></div>
+					<p class="active_t">三界本地</p>
+				</a>				
+			</li>
+			<li>
+				<a href="<?php echo \Yii::$app->urlManager->createUrl(['merchant/chosecity']);?>">
+					<div><img src="<?php echo $pc_style; ?>images/kefu-ct.png" alt=""></div>
+					<p>商家</p>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo Yii::$app->urlManager->createUrl('car/car');?>">
+					<div><img src="<?php echo $pc_style; ?>images/gouwuche-ct.png" alt=""></div>
+					<p>购物车</p>
+				</a>				
+			</li>
+			<li>
+				<a href="<?php echo Yii::$app->urlManager->createUrl('user/usercenter');?>">
+					<div><img src="<?php echo $pc_style; ?>images/gerenzhongxin-ct.png" alt=""></div>
+					<p>我的</p>
+				</a>				
+			</li>
+		</ul>
+	</footer>
+</div>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="<?php echo $pc_style; ?>js/lib/fastclick.js"></script>
+<script>
+	/*fastclick解决移动端点击延迟的问题*/
+	if ('addEventListener' in document) {
+	    document.addEventListener('DOMContentLoaded', function() {
+	        FastClick.attach(document.body);
+	    }, false);
+	}
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() { 
+   $(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 2000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},2000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 2000);
+	});
+
+
+	});
+</script>
+
+</body>
+</html>	
+	
+	
+	
+	
+	 

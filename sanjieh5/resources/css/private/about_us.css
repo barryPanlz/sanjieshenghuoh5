@@ -1,0 +1,22 @@
+
+.text_box{
+	padding:0 .3rem;
+	overflow: hidden;
+}
+.text_box p{
+	font-size:.2rem;
+	line-height: .32rem;
+	color:#848484;
+}
+.text_box .p_one{
+	margin-top:.36rem
+}
+.text_box h3{
+	font-size:.24rem;
+	margin:.5rem 0  .2rem 0;
+	color:#282828;
+}
+.text_box1 .one{
+	text-align: center;
+	color:#F3001d;
+}

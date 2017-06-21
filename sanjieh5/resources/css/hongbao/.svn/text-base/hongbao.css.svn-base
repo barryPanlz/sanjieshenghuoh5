@@ -1,0 +1,315 @@
+/*****************************马上去抢页面******************************/
+.hbBanner{
+	display: block;
+	width: 100%;
+	height: 2.01rem;
+}
+
+/*红包来啦宣传图*/
+.redEnvelope{
+	width: 100%;
+	height: 4.5rem;
+	background: #333333;
+}
+
+/*马上去抢链接a*/
+.envelope{
+	margin: 0.44rem auto 0;
+	width: 4.69rem;
+	height: 0.88rem;
+	display: block;
+	background: url(../../images/envelope.png) no-repeat;
+	background-size: cover;
+}
+
+/*红包说明文字*/
+p{
+	font-size: 0.22rem;
+	color: #848484;
+	text-indent: 0.3rem;
+	line-height: 0.31rem;
+}
+.hb_h3{
+	font-weight: 400;
+	margin-top: 0.76rem;
+	width: 100%;
+	text-indent: 0.3rem;
+	font-size: 0.28rem;
+	color: #282828;
+}
+.hb_p{
+	margin-top: 0.18rem;
+}
+
+/*登录弹框*/
+.loginBox{ 
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	height: 11.36rem;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+}
+.loginKuang{
+	position: absolute;
+	top: 2rem; 
+	left: 50%;
+	margin-left: -2.65rem;
+	width: 5.3rem;
+	height: 4.67rem;
+	background: #fff;
+	border-radius: 3px;
+}
+
+.login_h2{
+	padding: 0.58rem 0 0.48rem 0;
+	width: 100%;
+	text-indent: 0.3rem;
+	font-size: 0.28rem;
+	color: #282828;
+	font-weight: 400;
+}
+.login_txt{
+	display: block;
+	margin-left: 0.3rem;
+	font-size: 0.24rem;
+	color: #848484;
+	padding-left: 0.1rem;
+	width: 4.56rem;
+	height: 0.78rem;
+	line-height: 0.78rem;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+}
+.login_psd{
+	margin-top: 0.26rem;
+}
+
+.login_span{ 
+	position: absolute;
+	bottom: 0; 
+	border-top: 1px solid #CCCCCC;
+	width: 100%;
+	height: 0.76rem; 
+	line-height: 0.76rem; 
+	font-size: 0.28rem;
+	border-radius: 0 0 3px 3px;
+	color: #282828;
+}
+.login_span span{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.login_span span:first-child{
+	background: #f01c1c;
+	color: #FFFFFF;
+	border-radius: 0 0 0 3px;
+}
+
+
+
+
+/*****************************抢到红包页面******************************/
+.get_img{
+	display: block;
+	margin: 0.46rem auto 0;
+	width: 1.37rem;
+	height: 1.36rem;
+}
+
+.get_h2{
+	margin-top: 0.14rem;
+	width: 100%;
+	text-align: center;
+	font-size: 0.3rem;
+	color: #575757;
+	font-weight: 400;
+}
+
+.get_h1{ 
+	margin-top: 0.2rem;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+	color: #f3001d;
+	font-weight: 400;
+}
+.get_h1 font{
+	font-size: 0.92rem;
+	color: #f3001d;
+}
+.get_h1 span{
+	font-size: 0.32rem;
+	color: #f3001d;
+}
+
+.get_p{
+	margin-top: 0.14rem;
+	width: 100%;
+	text-align: center;
+	font-size: 0.24rem;
+	color: #282828; 
+}
+
+.get_a1{
+	display: block;
+	margin: 0.4rem auto 0;
+    width: 4.69rem;
+    text-align: center;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	font-size: 0.28rem;
+	color: #FFFFFF;
+	background: #F3001D;
+	border-radius: 2rem;
+}
+
+.get_a2{
+	display: block;
+	margin: 0.18rem auto 0;
+    width: 100%;
+    text-align: center; 
+	font-size: 0.24rem;
+	color: #282828; 
+	text-decoration: underline;
+}
+
+
+
+/*****************************红包被抢光了页面******************************/
+.none_img{
+	display: block;
+	margin: 0.4rem auto 0;
+	width: 1.44rem;
+	height: 1.43rem;
+}
+.none_p{
+	width: 100%;
+	text-align: center;
+	font-size: 0.24rem;
+	color: #575757;
+	line-height: 0.36rem;
+}
+.none_p1{
+	margin-top: 1.18rem;
+}
+
+
+/*****************************红包活动结束页面******************************/
+.finish_img{
+	display: block;
+	margin: 0.94rem auto 0;
+	width: 1.44rem;
+	height: 1.43rem;
+}
+.none_p2{
+	margin-top: 0.3rem;
+}
+.finish_img1{
+	display: block;
+	margin: 0.6rem auto 0;
+	width: 4.9rem;
+	height: 2.72rem;
+}
+
+
+
+
+/*红包领取情况*/
+.situation{
+	width: 100%;
+	height: auto;
+	font-size: 0;
+	margin-top: 0.44rem;
+	margin-bottom: 1rem;
+}
+.situation li{
+	width: 100%;
+	height: 0.78rem;
+	line-height: 0.78rem;
+	font-size: 0.22rem;
+	color: #282828;
+	text-indent: 0.3rem;
+}
+.situation li:first-child{
+	height: 0.5rem;
+	line-height: 0.5rem;
+	background: #ececec;
+}
+.situation li:first-child span{
+	color: #F3001D;
+}
+.situation li:first-child strong{
+	font-weight: 500;
+}
+.situation li font{
+	float: left;
+	width: 34%;
+	text-indent: 0;
+	text-indent: 0.3rem;
+	word-break: keep-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+} 
+.situation li i{
+	font-style: normal;
+	color: #848484;
+	float: left;
+	width: 29%;
+	text-indent: 0;
+	word-break: keep-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.situation li em{
+	font-style: normal; 
+	float: left;
+	width: 37%;
+	text-indent: 0;
+	word-break: keep-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

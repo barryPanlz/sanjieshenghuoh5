@@ -1,0 +1,103 @@
+/****************************店铺-转账**********************************/
+input[type="text"]:focus{line-height: normal}
+input[type="number"]:focus{line-height: normal}
+/*店铺转账金额*/
+.store_tranfer_sum{
+	width: 100%;
+	min-height: 2.4rem;
+	padding-top: 0.3rem;
+	background: #FFFFFF;
+	margin-top: 0.14rem;
+}
+.store_tranfer_box{
+	width: 5.7rem;
+	padding-left: 0.1rem;
+	height: 0.74rem;
+	line-height: 0.74rem;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC; 
+	border-radius: 0.1rem;
+	margin: 0.2rem auto 0;
+	font-size: 0.24rem;
+	color: #282828;
+}
+.store_tranfer_box input{
+	float: right;
+	width: 4.2rem;
+	height: 0.74rem;
+	line-height: 0.74rem;
+	color: #282828;
+}
+/*转账成功弹框*/
+.store_tranfer_btn{
+	/*position: absolute;
+	bottom: 0.2rem;
+	width: 5.8rem;*/
+	margin-top: 0.4rem;
+}
+/*转账失败*/
+.store_tranfer_suc{
+	position: fixed;
+	top: 50%;
+	margin-top: -0.85rem;
+	left: 50%;
+	margin-left: -1.85rem;
+}
+/*列表*/
+.store_tranfer_list {
+	width: 100%;
+	min-height: 0.5rem;
+	height: auto;
+	overflow: hidden;
+	margin-top:0.6rem ;
+}
+.store_tranfer_list li{
+	width: 100%;
+	min-height: 0.5rem;
+	overflow: hidden;
+	
+}
+.store_tranfer_list .list_title{
+	background: #DEDEDE;
+	height: 0.5rem;
+}
+.store_tranfer_list .list_title p{
+	height: 0.5rem;
+	line-height: 0.5rem;
+}
+.store_tranfer_list li p{
+	width: 33%;
+	min-height: 0.8rem;
+	line-height: 0.8rem;
+	overflow: hidden;
+	float: left;
+	font-size: 0.2rem;
+	color: #282828;
+	text-indent: 0.3rem;
+}
+
+
+
+/*兑换页面*/ 
+.cash_box{
+	border: 0;
+}
+.store_tranfer_sum{
+	height:auto;
+}
+.store_tranfer_box input{
+	/*border:1px solid #999;*/
+	border-radius:5px;
+	text-indent: .3rem;
+}
+.store_tranfer_list .list_title1 p{
+	height:.5rem;
+	min-height: 0.5rem; 
+}
+.store_tranfer_list .list_title1{
+	height:.5rem;
+}
+.store_tranfer_list1 li{
+	height:.78rem;
+	border-bottom:1px solid #dedede;
+}

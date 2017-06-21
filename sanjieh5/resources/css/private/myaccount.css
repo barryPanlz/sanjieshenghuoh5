@@ -1,0 +1,114 @@
+
+/*=======我的账单页面========*/
+.main{
+	background: #ececec;
+}
+.main_tit{
+	height:.7rem;
+	display: flex;
+	-webkit-align-items: center;
+}
+.main_tit h3{
+	margin-left:.3rem;
+	font-size:.28rem;
+	color:rgb(40,40,40);
+}
+.money_box{
+	overflow: hidden;
+	height:1.28rem;
+	width:100%;
+	background: #fff;
+}
+.money_box ul {
+	height:.82rem;
+	margin:.23rem auto .23rem;
+}
+.money_box ul li{
+	float:left;
+	width:50%;
+	font-size:0;
+	text-align: center;
+    word-break:keep-all;/* 不换行 */ 
+    white-space:nowrap;/* 不换行 */ 
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */ 
+    text-overflow:ellipsis;
+}
+.money_box ul li:first-child{
+	border-right:1px solid rgb(229,229,229);
+	margin-left:-1px;
+}
+.money_box ul li p{
+	margin-bottom:.1rem;
+	font-size:.28rem;
+	color:rgb(128,128,128);
+}
+.money_box ul li span{
+	font-size:.28rem;
+	color:rgb(40,40,40);
+}
+
+/*消息*/
+.info_box {
+	background: #fff;
+}
+.info_item{
+	height:1.1rem;
+	border-top:1px solid rgb(229,229,229);
+	padding:0 .3rem;
+}
+.info_item li{
+	float:left;
+	height:.7rem;
+	margin:.15rem auto .15rem;
+	font-size:.24rem;
+	color: #808080;
+}
+.info_item .one{
+	width:12%;
+	margin-right:4%;
+}
+.info_item .one span{
+	display: block;
+	height:.35rem;
+	color:#808080;
+}
+.info_item .two{
+	font-size:.28rem;
+	width:40%;
+	margin-right:4%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color:#808080;
+}
+.info_item .two p{
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color:#282828;
+	font-size: 0.28rem;
+	float: left;
+}
+.info_item .two span{
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color:#808080;
+	font-size: 0.24rem;
+	float: left;
+}
+.info_item .three{
+	width:36%;
+	text-align: right;
+	line-height:.7rem;
+	overflow: hidden;	
+	float: right;
+}
+.info_item .three span{
+	color:#808080;
+}
+.info_item .three span:nth-of-type(2){
+	margin-left:0.1rem ;
+}

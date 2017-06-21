@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的账房</title>
+		<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/common/reset.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/common/common.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $pc_style; ?>css/private/myaccountant.css" />
+		<script src="<?php echo $pc_style; ?>js/lib/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<header>
+			<h1>我的账房</h1>
+			<a class="u_back" href="<?php echo Yii::$app->urlManager->createUrl('user/usercenter');?>">返回</a>
+		</header>
+		<div class="main">
+			<div class="b_box re_box re_box_d">
+				<ul>
+					<li class="border_active border_active_d">
+						<p class="txt">三界石（余额）</p>
+						<p class="num"><?php echo empty($details1)?'':$details1->data->future_currency;?></p>
+						<a class="why" href="<?php echo Yii::$app->urlManager->createUrl('user/whatsanjieshi');?>">商城积分</a>
+					</li>
+					<li>
+						<p class="txt">三界宝（余额）</p>
+						<p class="num"><?php echo empty($details1)?'':$details1->data->future_treasure;?></p>
+						<a class="why" href="<?php echo Yii::$app->urlManager->createUrl('user/whatsanjiebao');?>">推广奖励</a>
+					</li>
+				</ul>
+			</div>
+			<div class="z_box">
+				<ul>
+					<li class="zz_1">
+						<a href="<?php echo Yii::$app->urlManager->createUrl('pay/centerpay');?>">充值</a>
+					</li>
+
+					<li class="trans_num zz_2">
+						<span>转账</span>
+						<img src="<?php echo $pc_style; ?>images/downarrow.png" />
+						<div class="">
+							<a href="<?php echo \Yii::$app->urlManager->createUrl(['user/treasure']);?>">转三界宝</a>
+							<a href="<?php echo \Yii::$app->urlManager->createUrl(['user/transfer']);?>">转三界石</a>
+						</div>
+		
+                        <!--<select name=""  onchange="window.location=this.value">
+                           <?php //echo \Yii::$app->urlManager->createUrl(['user/transfer']);?>               	-->
+                            <!--<option value="">转账</option>
+                            <option value=""><a href="#">三界宝转账</a></option>
+                            <option value="<?php echo \Yii::$app->urlManager->createUrl(['user/transfer']);?>">三界石转账</</option>
+                        </select>-->
+					</li>
+					<li class="zz_3">
+						<a href="<?php echo \Yii::$app->urlManager->createUrl(['physical/index']);?>">实体店消费付款</a>
+					</li>
+				</ul>
+			</div>
+			<div class="acc_box">
+				<div class="z_d">
+					<p>明细账单</p>
+				</div>
+                <form action="" method='post'>
+				<div class="z_list">
+					<ul class="z_tit fix">
+						<li class="t1">时间</li>
+						<li class="j1 z_type">
+							<span>交易类型</span>
+							<img src="<?php echo $pc_style; ?>images/downarrow.png" />
+							<div class="mark">
+								<div class="m_box">
+									<span></span>
+									<?php foreach($type_data as $key => $v) { ?>
+                                        <input type="hidden" class="acc_type" value="<?php echo $v->acc_type; ?>"/>
+										<div class="des"><?php echo $v->description; ?></div>
+									<?php }?>
+								</div>
+							</div>
+						</li>
+						<li class="s1">三界石</li>
+						<li class="s2">三界宝</li>
+						<li class="s3">人民币</li>
+					</ul>
+				</div>
+               </form>
+				<div class="z_li"  id="z_li">
+                    <?php foreach($acc_data1 as $key=>$val){ ?>
+                     <div class="re_li">
+	                    <ul>
+	                        <li class="" id="cladate"><span><?php echo empty($val->caldate) ? "0" : substr($val->caldate,0,10);?></span></li>
+	                        <li class="" id="acc_name"><?php echo empty($val->acc_name) ? "0" : $val->acc_name?></li>
+	                        <li class="z" id="wlbi_amnt"><?php echo empty($val->wlbi_amnt) ? "0" : $val->wlbi_amnt?></li>
+	                        <li class="" id="wlbao_amnt"><?php echo empty($val->wlbao_amnt) ? "0" : $val->wlbao_amnt?></li>
+	                        <li class="" id="rmb_amnt"><?php echo empty($val->rmb_amnt) ? "0" : $val->rmb_amnt?></li>
+	                    </ul>
+                     </div>
+                    <?php }?>
+				</div>
+			</div>
+<!--            分页-->
+			<div class="page_book">
+<!--                <a href="">上一页</a>-->
+<!--                <a href="">下一页</a>-->
+                <?php if($page->currentPage >1){ ?>
+                    <a href="<?php echo \Yii::$app->urlManager->createUrl(['user/genacc','currentPage' =>$page->currentPage - 1])?>">上一页</a>
+                <?php } ?>
+                <?php if($page->currentPage < $page->totalPage){ ?>
+                    <a href="<?php echo \Yii::$app->urlManager->createUrl(['user/genacc','currentPage' =>$page->currentPage +1])?>">下一页</a>
+                <?php }?>
+			</div>
+		</div>
+		<footer>
+			<div class="z_li z_heji g_lione">
+				<ul>
+					<li class=""></li>
+					<li class="z_li_h">合计</li>
+					<li class="z_num "><?php echo empty($subTotal->wlbi_amnt_total) ? "0" : $subTotal->wlbi_amnt_total?></li>
+					<li class="z_num  z_num1"><?php echo empty($subTotal->wlbao_amnt_total) ? "0" : $subTotal->wlbao_amnt_total?></li>
+					<li class="z_num z_num1"><?php echo empty($subTotal->rmb_amnt_total) ? "0" : $subTotal->rmb_amnt_total?></li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="<?php echo $pc_style; ?>js/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo $pc_style; ?>js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+            //三界石转账
+//            $("#sanjieshi").click(function(){
+//                $.ajax({
+//                    url:"<?php //echo \Yii::$app->urlManager->createUrl(['user/transfer']);?>//",
+//
+//                    type:'post',
+//                    success:function(data){
+//                        alert(data);
+////                        if(data == 1){
+////                            history.go(0);
+////                        }else{
+////                            alert("网络繁忙，请稍候重试");
+////                        }
+//                    }
+//                });
+//            });
+            $(".des").click(function(){
+                var des = $(this).index()/2 - 1;
+                var x = $(".acc_type").eq(des).val();
+                $.ajax({
+                    url:"<?php echo Yii::$app->urlManager->createUrl('user/typelist');?>",
+                    data:{'des':x},
+                    type:'post',
+                    success:function(data){
+                        var objs = jQuery.parseJSON( data );
+                        var attrobj = "";
+                        $.each(objs,function(k,v){
+                            if(v.caldate == ''){
+                                var caldate = 0;
+                            }else{
+                                var caldate = v.caldate;
+                            }
+                            if(v.acc_name == ''){
+                                var acc_name = 0;
+                            }else{
+                                var acc_name = v.acc_name;
+                            }
+                            if(v.wlbi_amnt == ''){
+                                var wlbi_amnt = 0;
+                            }else{
+                                var wlbi_amnt = v.wlbi_amnt;
+                            }
+                            if(v.wlbao_amnt == ''){
+                                var wlbao_amnt = 0;
+                            }else{
+                                var wlbao_amnt = v.wlbao_amnt;
+                            }
+                            if(v.rmb_amnt == ''){
+                                var rmb_amnt = 0;
+                            }else{
+                                var rmb_amnt = v.rmb_amnt;
+                            }
+                            attrobj +='<ul>';
+                            attrobj += '<li class="" id="cladate"><span>'+ caldate +'</span></li>';
+                            attrobj += '<li class="" id="acc_name"><span>'+ acc_name +'</span></li>';
+                            attrobj += '<li class="" id="wlbi_amnt"><span>'+ wlbi_amnt +'</span></li>';
+                            attrobj += '<li class="" id="wlbao_amnt"><span>'+ wlbao_amnt +'</span></li>';
+                            attrobj += '<li class="" id="rmb_amnt"><span>'+ rmb_amnt +'</span></li>';
+                            attrobj +='</ul>';
+                       });
+                        $('#z_li').html(attrobj);
+                    },
+                    error:function(){
+                        alert(error);
+                    }
+
+                });
+            });
+
+			$('.trans_num span').click(function(){
+				$('.trans_num div').toggle();
+			})
+			
+			$('.z_type span').click(function() {
+				$('.m_box').toggle();
+			})
+
+			$('.m_box div').click(function() {
+				$('.mark .m_box').hide();
+			})
+		</script>
+	</body>
+
+</html>

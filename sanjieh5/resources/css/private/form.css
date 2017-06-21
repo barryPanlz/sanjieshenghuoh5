@@ -1,0 +1,315 @@
+/* 修改和添加收货地址------------------------------ */
+input{
+	 -webkit-appearance: none;
+}
+.form_box{
+	margin-top: 0.2rem;
+}
+.form_box li{
+	height: 0.74rem;
+	border-bottom: 1px solid #ededed;
+	background: #fff;
+	box-sizing:border-box;
+	padding:0 0.3rem;
+	line-height: 0.74rem
+}
+.form_box li.address_box{
+	height: auto;
+	overflow: hidden;
+	line-height: 0.7rem;
+}
+.form_box li.address_box div{
+	margin-right: 0;
+	overflow: hidden;
+}
+.form_box li.address_box select{
+	display: inline-block;
+	height: .6rem;
+	border: 1px solid #d4d4d4;
+	box-sizing:border-box;
+	width: 25%;
+	margin-right: .16rem;
+	float: left;
+	font-size: .2rem;
+	color: #999;
+	padding-left: .08rem;
+	-webkit-appearance: none;
+	appearance: none;
+	background: url(../../images/down_gray.png) no-repeat 95% center; 
+	-webkit-background-size: 8px;
+	background-size: 8px;
+}
+.form_box li.address_box input[type='text']{
+	border: 1px solid #d4d4d4;
+	box-sizing:border-box;
+	padding-left: .08rem;
+	width: 5.65rem;
+	height: .6rem;
+	margin-top: .26rem;
+	font-size: .2rem;
+}
+.form_box li div{
+	float: left;
+	margin-right: 10px;
+	font-size: 0.24rem;
+	color: #282828;
+}
+.form_box li:last-child{
+	border-bottom: 0;
+}
+.form_box li input[type='text']{
+	float: left;
+	width:70%;
+	height: 0.74rem;
+	font-size: 0.2rem;
+	color: #282828;
+	font-size: .24rem;
+}
+.form_box li input[type='number']{
+	float: left;
+	width:70%;
+	height: 0.74rem;
+	font-size: 0.2rem;
+	color: #282828;
+	font-size: .24rem;
+}
+.form_box li input[type="checkbox"]{
+	top: -0.23rem;
+	height: .24rem;
+	width:0.24rem;
+	margin-right: .16rem;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	
+}
+.form_box li input[type=checkbox]:checked::after {
+    height: 0.24rem;
+    width: 0.24rem;
+    -webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.form_box li label{
+	color: #999;
+	font-size: .2rem;
+}
+
+.sure_button{
+	margin-top: 2.95rem;
+}
+
+.sure_button_noclick input{
+	color: #999;
+	background: #ccc;
+}
+.error_tip{
+	position: absolute;
+	top: 20%;
+	min-height: .86rem;
+	height: auto;
+	width: 4.45rem;
+	left: 50%;
+	margin-left: -2.23rem;
+	/*transform: translate(-50%,-50%);*/
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	z-index: 100;
+	font-size: .24rem;
+	text-align: center;
+	line-height: .86rem;
+	border-radius: 3px;
+	display: none;
+}
+
+
+/* 注册页regist.html------------------------------- */
+.logo{
+	width: 3.8rem;
+	height: 0.9rem;
+	margin:.69rem auto;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+	vertical-align: inherit;
+	display: block;
+}
+.regist_box li{
+	margin: 0 15px;
+	margin-bottom: .30rem;
+	height: .78rem;
+	overflow: hidden;
+}
+.regist_box li input{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #d4d4d4;
+	font-size: .24rem;
+	color: #282828;
+	width: 100%;
+	height: 100%;
+	display: block;
+	padding-left: .1rem;
+}
+.regist_box li input.code_text{
+	width: 62%;
+	float: left;
+}
+.code{
+	float: right;
+	width: 36%;
+	font-size: .24rem;
+	color: #f3001d;
+	border: 1px solid #d4d4d4;
+	height: .78rem;
+	line-height: .78rem;
+	box-sizing:border-box;
+	text-align: center;
+}
+.agree{
+	overflow: hidden;
+	height: .3rem;
+}
+.agree input[type=checkbox]{
+	top: 0.01rem;
+}
+.agree label{
+	font-size: .24rem;
+	color: #282828;
+	float: left;
+	margin-left: 15px;
+}
+.agree a{
+	font-size: .24rem;
+	color: #f3001d;
+}
+.go_login{
+	font-size: .2rem;
+	text-align: right;
+	padding-right: 15px;
+	margin-top: .2rem;
+}
+.version{
+	font-size: .18rem;
+	text-align: center;
+	margin-top: 1.4rem;
+	color: #848484;
+	margin-bottom: .37rem;
+}
+.code_share{
+	border: 0;
+	line-height: .36rem;
+	font-size: .2rem;
+	text-align: left;
+}
+.code_share p{
+	color: #999;
+	font-size: .22rem;
+	margin-top: .05rem;
+}
+.code_share a{
+	color: #f3001d;
+	font-size: .22rem;
+}
+.regist_button{
+	margin-top: .28rem;
+}
+.success_box{
+	width: 3.46rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	background: rgba(0,0,0,0.5);
+	border-radius: 3px;
+	z-index: 100;
+	font-size: .24rem;
+	padding: .27rem 0;
+	opacity: 0;
+	display: none;
+}
+.success_box img{
+	margin-bottom: .20rem;
+	width: .7rem;
+}
+.success_box p{
+	color: #fff;
+}
+
+/* 登录页login.html------------------------------- */
+
+.login_box li{
+	/* position: relative; */
+}
+.login_box li input{
+	background: url(../../images/username.png) no-repeat .15rem .2rem;
+	-webkit-background-size: .3rem;
+	background-size: .3rem;
+}
+.login_box li:nth-child(2) input,.login_box li:nth-child(3) input{
+	background-image: url(../../images/key.png);
+}
+
+.login_box span{
+	width: .60rem;
+	text-align: center;
+	height: 100%;
+	position: absolute;
+}
+.login_box span img{
+	vertical-align: top;
+	width: 0.3rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.login_box li input{
+	padding-left: .60rem;
+}
+.code img{
+	width: 100%;
+	height: 100%;
+	vertical-align: inherit;
+	display: block;
+	border: 0;
+}
+.login_bottom{
+	overflow: hidden;
+	padding: 0 .3rem
+}
+.login_bottom .go_login{
+	float: left;
+}
+.go_forgetpwd{
+	float: right;
+	font-size: .2rem;
+	color: #282828;
+	margin-top: .2rem;
+	text-decoration: underline;
+}
+.bottom_version{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+/* 邀请注册分享页invitationregist.html */
+/*.no_padding{
+	padding: 0 !important;
+}
+.invitation_bottom{
+	padding:.1rem .3rem .3rem;
+	margin-top: .14rem;
+	background: #fff;
+}
+.invitation_top{
+	background: #fff;
+	overflow: hidden;
+	padding-bottom: .4rem;
+}
+.invitation_agree input[type=checkbox] {
+    top: -0.03rem;
+}*/

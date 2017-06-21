@@ -1,0 +1,83 @@
+/********************************普通会员-充值成功****************************************/
+/*充值成功图像*/
+.topup_success_img{
+	margin-top: 0.2rem;
+	width: 100%;
+	text-align: center;
+	height: 2.1rem;
+	background: #FFFFFF;
+}
+.topup_success_img img{
+	width: 0.84rem;
+	height: 0.84rem;
+}
+.topup_success_img p{
+	width: 100%;
+	text-align: center;
+	font-size: 0.28rem;
+	color: #f01c1c;
+}
+/*充值成功详情*/
+.topup_success_details{
+	margin-top: 0.2rem;
+	width: 6.1rem;
+	padding: 0.16rem 0 0 0.3rem;
+	height: 3.4rem;
+	background: #FFFFFF;
+	font-size: 0.24rem;
+	display:none;
+}
+.topup_success_details li{
+	padding-top: 0.30rem;
+}
+.topup_success_details li span{
+	color: #282828;
+} 
+.topup_success_details li em{
+	font-style: normal;
+	color: #848484;
+	margin-left: 0.2rem;
+} 
+
+.topup_success_back{
+	width: 5.8rem;
+	position: absolute;
+	bottom: 0.2rem;
+}
+
+
+
+/********************************普通会员-充值失败****************************************/
+/*充值成功详情*/
+.topup_fail_details{
+	margin-top: 0.2rem;
+	width: 6.1rem;
+	padding: 0.16rem 0 0 0.3rem;
+	height: 2.2rem;
+	background: #FFFFFF;
+	font-size: 0.24rem;
+}
+.topup_fail_details li{
+	padding-top: 0.30rem;
+}
+.topup_fail_details li span{
+	color: #282828;
+} 
+.topup_fail_details li em{
+	font-style: normal;
+	color: #848484;
+	margin-left: 0.2rem;
+}
+
+
+.topup_fail_back{
+	width: 5.8rem;
+	position: absolute;
+	bottom: 0.2rem;
+}
+
+
+
+
+
+

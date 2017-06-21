@@ -1,0 +1,247 @@
+/*1.商品订单结算页*/
+.fix:after{
+	display: block;
+	height:0;
+	content: '';
+	clear: both;
+	visibility: visible;
+}
+.fix{
+	*zoom:1;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+.art_top_box,.art_mid_box{
+	margin-top:.1rem;
+	height:2.1rem;
+	width:100%;
+	background: #fff;
+}
+.art_top,.art_mid,.art_btm,.art_mid_top,.art_mid_mid,.art_mid_btm{
+	width:90.625%;
+	margin:0 auto;
+}
+.art_top{
+	font-size:0;
+	height:.63rem;
+	line-height: .63rem;
+}
+.art_top img{
+	width:.25rem;
+	height:.25rem
+}
+.art_top p{
+	font-size:.24rem;
+	vertical-align: middle;
+	margin-left:.1rem;
+	display: inline-block;
+	color:#575757;
+}
+.art_mid{
+	min-height:.66rem;
+	font-size:.18rem;
+	color:#848484;
+	border-bottom: 1px solid #dedede;
+}
+.art_mid span{
+	color:#f3001d;
+}
+.art_btm{
+	height:.8rem;
+}
+.art_btm p{
+	height:.8rem;
+	line-height: .8rem;
+	font-size:.2rem;
+	color#999;
+}
+
+.art_mid_box{
+	height:2.31rem;
+}
+.art_mid_top {
+	min-height:.62rem;
+	line-height: 0.32rem;
+	border-bottom:1px solid #dedede;
+	font-size:.22rem;
+	line-height: .62rem;
+}
+.art_mid_top .fl{
+	color:#575757;
+}
+.art_mid_top .fr,.art_mid_btm .fl span{
+	color:#F3001D;
+}
+.art_mid_mid{
+	height:.66rem;
+	line-height: .66rem;
+	font-size:.22rem;
+	color:#999;
+}
+.art_mid_btm {
+	height:1.02rem;
+	font-size:.22rem;
+	line-height: 1.02rem;
+}
+.art_mid_btm a,.art_mid_btm p{
+	color:#575757;
+}
+.art_mid_btm .fl span{
+	margin-left:.1rem;
+	cursor:pointer;
+}
+.art_btm_box{
+	width:90.625%;
+	height:.74rem;
+	margin:0 auto;
+}
+.art_btm_box input{
+	height:.74rem;
+	width:100%;
+	background: #F3001D;
+	border-radius:5px;
+	text-align: center;
+	font-size:.28rem;
+	color:#fff;
+	
+}
+
+
+/*生活订单结算*/
+.order_set,.order_btm_box input{
+	background:#12AC9F;
+}
+.ord_mid span,.order_mid_top .fr{
+	color:#12AC9F;
+}
+.art_mid_top1{
+	width:100%;
+}
+.input_box,.pay_way{
+	padding:.5rem .30rem 0 .30rem;
+	overflow: hidden;
+	height:2.16rem;
+	background: #fff;
+}
+.input_box div{
+	font-size:.24rem;
+    color:#282828;
+    height:.72rem;
+    border:1px solid #ccc;
+    margin-bottom: .24rem;
+    line-height: .72rem;
+}
+.input_box input{
+	margin-left:.6rem;
+	font-size:.24rem;
+	color:#575757;
+}
+
+.pay_way{
+	height:2.66rem;
+	margin-top:.14rem;
+	padding:0rem .30rem 0 .30rem;
+}
+.pay_way h2{
+	font-size:.24rem;
+	color:#282828;
+	font-weight:700;
+	margin-bottom: .24rem;
+}
+.pay_way ul li{
+	font-size:0;
+}
+.pay_radio1{
+	margin-top:.1rem;
+}
+.pay_radio li div{
+	position: relative;
+	margin-left:.1rem;
+	display: inline-block;	
+	height:.58rem;
+	padding:0 .2rem;
+	line-height: .58rem;
+	border: 2px solid #Fff;
+}
+.pay_radio li div.choose{
+	border: 2px solid #F3001D;
+}
+.pay_radio1 li div.choose{
+	border: 2px solid #12AC9F;
+}
+.pay_radio li div.choose:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right:-1px;
+	background: url(../../images/duigou.png) no-repeat center;
+	background-size: 100%;
+	width: .32rem;
+	height: .31rem;
+}
+.pay_radio1 li div.choose:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right:-1px;
+	background: url(../../images/duigou1.png) no-repeat center;
+	background-size: 100%;
+	width: .32rem;
+	height: .31rem;
+}
+
+.pay_way ul li input{
+	vertical-align: middle;
+	cursor: pointer;
+}
+.pay_way ul li input[type=radio]{
+	width:.28rem;
+	height:.28rem;
+}
+.pay_way ul li input[type=radio]:checked:after{
+	width:.28rem;
+	height:.28rem;
+    background: url(../../images/icon_radio_green.png);
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+
+
+.pay_way ul li span{
+	
+	margin-left:.1rem;
+	color:#999;
+	font-size:.14rem;
+	vertical-align:middle;
+}
+.zifubao{
+	width:1rem;
+	height:.36rem;
+}
+.weixin{
+	height:.28rem;
+	width:1rem;
+}
+.yinlian{
+	height:.27rem;
+	width:1.13rem;
+}
+.sure_pay{
+	padding:0 .30rem 0 .30rem;
+	margin:.98rem 0 1rem 0;
+}
+.sure_pay input{
+	width:100%;
+	height:.74rem;
+	background: #F3001D;
+	border-radius:5px;
+	font-size:.24rem;
+	color:#fff;
+	cursor: pointer;
+}
+
